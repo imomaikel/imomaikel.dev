@@ -1,3 +1,6 @@
+// @ts-ignore
+import flattenColorPalette from 'tailwindcss/lib/util/flattenColorPalette';
+import svgToDataUri from 'mini-svg-data-uri';
 import type { Config } from 'tailwindcss';
 
 const config = {
@@ -74,7 +77,22 @@ const config = {
 			},
 		},
 	},
-	plugins: [require('tailwindcss-animate')],
+	plugins: [
+		require('tailwindcss-animate'),
+		function ({ matchUtilities, theme }: any) {
+			// https://ui.aceternity.com/components/grid-and-dot-backgrounds
+			matchUtilities(
+				{
+					'bg-grid-small': (value: any) => ({
+						backgroundImage: `url("${svgToDataUri(
+							`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="8" height="8" fill="none" stroke="${value}"><path d="M0 .5H31.5V32"/></svg>`
+						)}")`,
+					}),
+				},
+				{ values: flattenColorPalette(theme('backgroundColor')), type: 'color' }
+			);
+		},
+	],
 } satisfies Config;
 
 export default config;

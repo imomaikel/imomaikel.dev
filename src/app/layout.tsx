@@ -16,7 +16,12 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='en'>
-			<body className={inter.className}>{children}</body>
+			<body className={inter.className}>
+				<div className='w-full min-h-screen h-full bg-background bg-grid-small-white/[0.2] relative flex items-center justify-center'>
+					<div className='absolute pointer-events-none inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]'></div>
+					<div>{children}</div>
+				</div>
+			</body>
 		</html>
 	);
 }

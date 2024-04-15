@@ -66,3 +66,40 @@ export const HERO_TEXTS = [
 ].map((text) => text.split(' ').map((word) => ({ text: word })));
 
 export const HERO_TEXTS_INTERVAL = 4_000;
+
+type TECH_STACK = 'Next.js';
+
+type TLanguage = 'Polish' | 'English';
+export const PUBLIC_PROJECTS: {
+  name: string;
+  description: string;
+  techStack: TECH_STACK[];
+  images: `/${string}`[];
+  sourceCodeUrl: string;
+  sourceCodeFiles: number;
+  appUrl: string;
+  languages: TLanguage[];
+}[] = [
+  {
+    name: 'Project #1',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    techStack: ['Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js'],
+    images: ['/img'],
+    sourceCodeUrl: 'https://github.com',
+    appUrl: 'https://github.com',
+    sourceCodeFiles: 200,
+    languages: ['English', 'Polish'],
+  },
+  {
+    name: 'Project #1',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    techStack: ['Next.js'],
+    images: ['/img'],
+    sourceCodeFiles: 100,
+    sourceCodeUrl: 'https://github.com',
+    appUrl: 'https://github.com',
+    languages: ['Polish'],
+  },
+];

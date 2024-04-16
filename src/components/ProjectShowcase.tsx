@@ -1,6 +1,7 @@
 import { PUBLIC_PROJECTS } from '@/utils/constans';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
+import ImageSwiper from './ImageSwiper';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import Link from 'next/link';
@@ -12,11 +13,24 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
   const { name, appUrl, description, images, sourceCodeUrl, techStack, sourceCodeFiles, languages } = props;
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
       <div className="space-y-2">
+        {/* Mobile name */}
+        <div className="flex flex-col items-center space-x-4 space-y-2 md:hidden">
+          <h4 className="text-4xl font-bold">{name}</h4>
+          <div className="flex space-x-1">
+            {languages.map((language) => (
+              <Badge key={`${name}${language}`} variant="secondary">
+                {language}
+              </Badge>
+            ))}
+          </div>
+        </div>
         {/* Images */}
-        <div className="relative">
-          <div className="relative aspect-video h-min w-96 shrink-0 bg-muted">{/* TODO */}</div>
+        <div className="relative max-w-[calc(100vw-48px-32px)]">
+          <div className="mt-14 aspect-video h-min shrink-0 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]">
+            <ImageSwiper urls={images} />
+          </div>
         </div>
         {/* Links */}
         <div className="w-full">
@@ -42,9 +56,9 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
           </div>
         </div>
       </div>
-      <div className="space-y-2">
-        {/* Name */}
-        <div className="flex items-center space-x-4">
+      <div className="relative space-y-2">
+        {/* Desktop Name */}
+        <div className="relative z-10 hidden items-center space-x-4 md:flex">
           <h4 className="text-4xl font-bold">{name}</h4>
           <div className="flex space-x-1">
             {languages.map((language) => (
@@ -56,10 +70,10 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
         </div>
 
         {/* Description */}
-        <div className="text-justify text-muted-foreground">{description}</div>
+        <div className="relative z-10 max-w-3xl text-justify text-muted-foreground">{description}</div>
 
         {/* Tech Stack */}
-        <div className="space-y-1">
+        <div className="relative z-10 space-y-1">
           <p className="text-sm font-semibold">Tech Stack</p>
           <div className="flex flex-wrap gap-1">
             {techStack.map((text, index) => (
@@ -67,6 +81,9 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
             ))}
           </div>
         </div>
+
+        {/* Gradient */}
+        <div className="absoluteCenter absolute h-[350px] w-[150px] rotate-[72deg] bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 opacity-75 blur-[125px]"></div>
       </div>
     </div>
   );

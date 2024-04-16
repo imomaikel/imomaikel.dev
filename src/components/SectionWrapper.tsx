@@ -1,12 +1,14 @@
 'use server';
+import { cn } from '@/lib/utils';
 
 type TSectionWrapper = {
   children: React.ReactNode;
+  className?: string;
 };
-const SectionWrapper = async ({ children }: TSectionWrapper) => {
+const SectionWrapper = async ({ children, className }: TSectionWrapper) => {
   return (
     <div className="mx-auto flex min-h-[50vh] w-screen max-w-screen-2xl flex-col items-center justify-center px-6 py-32">
-      <div className="w-full">{children}</div>
+      <div className={cn('w-full', className)}>{children}</div>
     </div>
   );
 };

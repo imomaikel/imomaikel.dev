@@ -52,3 +52,9 @@
 .absoluteCenter {
   @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
 }
+
+@media (max-width: 767px) {
+  .noTranslate {
+    transform: translate(0, 0) !important;
+  }
+}

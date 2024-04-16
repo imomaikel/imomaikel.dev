@@ -2,8 +2,10 @@
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
 import { EffectCreative, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { bounceAnimation } from '@/lib/motion';
 import { useEffect, useState } from 'react';
 import { FaImage } from 'react-icons/fa6';
+import { motion } from 'framer-motion';
 import type TSwiper from 'swiper';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -36,7 +38,13 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
 
   return (
     <div className="flex h-full w-full rounded-md bg-muted/50">
-      <div className="absolute -top-[50px] left-0 w-full md:-top-8">
+      <motion.div
+        whileInView="show"
+        viewport={{ once: true }}
+        initial="hidden"
+        variants={bounceAnimation({ side: 'vertical', delay: 0.6, steps: [60, -10, 0] })}
+        className="absolute -top-[50px] left-0 w-full md:-top-8"
+      >
         <div className="relative flex w-full flex-col-reverse justify-between md:flex-row">
           <div className="flex items-center space-x-1">
             <div className="flex space-x-1">
@@ -73,7 +81,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
             <FaImage className="!ml-2 h-6 w-6 animate-bounce" />
           </div>
         </div>
-      </div>
+      </motion.div>
       <Swiper
         onSwiper={setSwiper}
         modules={[EffectCreative, Pagination]}

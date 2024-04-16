@@ -1,7 +1,10 @@
+'use client';
+import { bounceAnimation, staggerContainer } from '@/lib/motion';
 import { PUBLIC_PROJECTS } from '@/utils/constans';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa6';
 import ImageSwiper from './ImageSwiper';
+import { motion } from 'framer-motion';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
 import Link from 'next/link';
@@ -13,28 +16,45 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
   const { name, appUrl, description, images, sourceCodeUrl, techStack, sourceCodeFiles, languages } = props;
 
   return (
-    <div className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0">
-      <div className="space-y-2">
+    <motion.div
+      whileInView="show"
+      initial="hidden"
+      variants={{
+        hidden: {},
+        show: {},
+      }}
+      viewport={{ once: true }}
+      className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0"
+    >
+      <motion.div className="space-y-2">
         {/* Mobile name */}
         <div className="flex flex-col items-center space-x-4 space-y-2 md:hidden">
-          <h4 className="text-4xl font-bold">{name}</h4>
-          <div className="flex space-x-1">
+          <motion.h4 variants={bounceAnimation({ side: 'vertical', delay: 0.2 })} className="text-4xl font-bold">
+            {name}
+          </motion.h4>
+          <motion.div variants={staggerContainer(0.1, 0.3)} className="flex space-x-1">
             {languages.map((language) => (
-              <Badge key={`${name}${language}`} variant="secondary">
-                {language}
-              </Badge>
+              <motion.div variants={bounceAnimation({ side: 'horizontal' })} key={`mobile-${name}${language}`}>
+                <Badge variant="secondary">{language}</Badge>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
         </div>
         {/* Images */}
         <div className="relative max-w-[calc(100vw-48px-32px)]">
-          <div className="mt-14 aspect-video h-min shrink-0 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]">
+          <motion.div
+            variants={bounceAnimation({ side: 'vertical', delay: 0.3 })}
+            className="mt-14 aspect-video h-min shrink-0 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]"
+          >
             <ImageSwiper urls={images} />
-          </div>
+          </motion.div>
         </div>
         {/* Links */}
-        <div className="w-full">
-          <div className="grid grid-cols-2 gap-4">
+        <motion.div
+          variants={bounceAnimation({ side: 'vertical', delay: 0.6, steps: [-60, 10, 0] })}
+          className="w-full"
+        >
+          <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
             <Button className="space-x-3" variant="ghost" asChild>
               <Link href={sourceCodeUrl}>
                 <FaExternalLinkAlt className="h-6 w-6" />
@@ -54,38 +74,49 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
               </Link>
             </Button>
           </div>
-        </div>
-      </div>
-      <div className="relative space-y-2">
+        </motion.div>
+      </motion.div>
+      <motion.div className="relative space-y-2">
         {/* Desktop Name */}
-        <div className="relative z-10 hidden items-center space-x-4 md:flex">
-          <h4 className="text-4xl font-bold">{name}</h4>
-          <div className="flex space-x-1">
+        <motion.div className="relative z-10 hidden items-center space-x-4 md:flex">
+          <motion.h4 variants={bounceAnimation({ side: 'vertical', delay: 0.2 })} className="text-4xl font-bold">
+            {name}
+          </motion.h4>
+          <motion.div variants={staggerContainer(0.1, 0.3)} className="flex space-x-1">
             {languages.map((language) => (
-              <Badge key={`${name}${language}`} variant="secondary">
-                {language}
-              </Badge>
+              <motion.div variants={bounceAnimation({ side: 'horizontal' })} key={`${name}${language}`}>
+                <Badge variant="secondary">{language}</Badge>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Description */}
-        <div className="relative z-10 max-w-3xl text-justify text-muted-foreground">{description}</div>
+        <motion.div
+          variants={bounceAnimation({ side: 'vertical', delay: 0.4 })}
+          className="relative z-10 max-w-3xl text-justify text-muted-foreground"
+        >
+          {description}
+        </motion.div>
 
         {/* Tech Stack */}
-        <div className="relative z-10 space-y-1">
-          <p className="text-sm font-semibold">Tech Stack</p>
-          <div className="flex flex-wrap gap-1">
+        <motion.div className="relative z-10 space-y-1">
+          <motion.p variants={bounceAnimation({ side: 'vertical', delay: 0.5 })} className="text-sm font-semibold">
+            Tech Stack
+          </motion.p>
+          <motion.div variants={staggerContainer(0.15, 0.6)} className="flex flex-wrap gap-1">
             {techStack.map((text, index) => (
-              <Badge key={`name-${text}${index}`}>{text}</Badge>
+              <motion.div key={`name-${text}${index}`} variants={bounceAnimation({ side: 'horizontal' })}>
+                <Badge>{text}</Badge>
+              </motion.div>
             ))}
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Gradient */}
         <div className="absoluteCenter absolute h-[350px] w-[150px] rotate-[72deg] bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 opacity-75 blur-[125px]"></div>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

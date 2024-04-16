@@ -1,11 +1,10 @@
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google';
+import Navbar from '@/components/Navbar';
+import Vercel from '@/components/Vercel';
 import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
-import Navbar from '@/components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -16,15 +15,14 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <body className={cn('w-screen overflow-x-hidden', inter.className)}>
         <div className="relative flex h-full min-h-screen w-full bg-background bg-grid-small-white/[0.2]">
           <div className="pointer-events-none absolute inset-0 flex bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] md:[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
           <div className="overflow-x-hidden">{children}</div>
         </div>
         <Navbar />
-        <Analytics />
-        <SpeedInsights />
+        <Vercel />
       </body>
     </html>
   );

@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { cn } from '@/lib/utils';
 
 import './globals.css';
+import Navbar from '@/components/Navbar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ const RootLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
           <div className="pointer-events-none absolute inset-0 flex bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] md:[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
           <div className="overflow-x-hidden">{children}</div>
         </div>
+        <Navbar />
         <Analytics />
         <SpeedInsights />
       </body>

@@ -1,3 +1,6 @@
+import { TNavItem } from '@/components/ui/floating-navbar';
+import { FaHome, FaRegLightbulb } from 'react-icons/fa';
+
 export const HERO_TEXTS = [
   "Scroll Down and Let's Uncover the Possibilities Together!",
   "Scroll Down and Let's Amplify Your Impact!",
@@ -100,5 +103,18 @@ export const PUBLIC_PROJECTS: {
     sourceCodeUrl: 'https://github.com',
     appUrl: 'https://github.com',
     languages: ['Polish'],
+  },
+];
+
+export const NAV_ITEMS: TNavItem[] = [
+  {
+    link: '/',
+    name: 'Home',
+    icon: FaHome,
+  },
+  {
+    link: '#public-projects',
+    name: 'Projects',
+    icon: FaRegLightbulb,
   },
 ];

@@ -8,7 +8,7 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section>
+      <section id="public-projects">
         <PublicProjects />
       </section>
     </div>

@@ -73,6 +73,7 @@ export const HERO_TEXTS_INTERVAL = 4_000;
 const TECH_STACKS = [
   'Next.js',
   'Auth.js',
+  'NextAuth.js',
   'CashBill',
   'Drag and Drop',
   'Hook Form',
@@ -86,6 +87,13 @@ const TECH_STACKS = [
   'Recharts',
   'Zod',
   'Zustand',
+  'Express',
+  'Discord.js',
+  'MySQL',
+  'RCON',
+  'Handlebars',
+  'Socket.io',
+  'Tebex',
 ] as const;
 type TTechStack = (typeof TECH_STACKS)[number];
 
@@ -101,7 +109,7 @@ export const PUBLIC_PROJECTS: {
   languages: TLanguage[];
 }[] = [
   {
-    name: 'Olejesawiniec',
+    name: 'Oleje Sawiniec',
     description: [
       'Introducing a web store tailored for the Polish market, offering a curated selection of 100% natural oils, seeds, and flour for home use. Developed for discerning consumers, the website ensures a seamless user experience, allowing easy browsing, filtering, and sorting of products.',
       'Key features include integration with CashBill for secure payments, user account creation for wishlists, and a robust admin panel for comprehensive insights and control over operations. From sales tracking to user behavior analysis, the admin panel offers data-driven tools for business optimization.',
@@ -129,6 +137,39 @@ export const PUBLIC_PROJECTS: {
     languages: ['Polish'],
     appUrl: 'https://olejesawiniec.pl',
     sourceCodeUrl: 'https://github.com/imomaikel/olejesawiniec',
+  },
+  {
+    name: 'EliteCore',
+    description: [
+      'This project, initiated in March 2019 during my early stages as a software developer, has been an ongoing evolution. It revolves around a web store and web panel for the game "ARK: Survival Evolved & Ascended"',
+      'The web panel provides users with access to their in-game logs and the ability to open tickets automatically on Discord. It also enables real-time messaging on both the website and Discord via socket.io.',
+      'An essential aspect of the project is the admin panel, granting administrators control over the website, Discord bot behavior, and configuration adjustments.',
+      'The focal point of the website is the web store, integrated with the Tebex Headless API. Here, users can purchase items and seamlessly receive them in-game.',
+      'Throughout its development, this project has allowed me to hone my skills as a software developer, tackling complex functionalities and integrating various technologies to create a comprehensive solution for the gaming community.',
+    ],
+    techStack: [
+      'React',
+      'Next.js',
+      'NextAuth.js',
+      'Express',
+      'Socket.io',
+      'Tebex',
+      'tRPC',
+      'MySQL',
+      'Discord.js',
+      'Hook Form',
+      'Framer Motion',
+      'Zod',
+      'Zustand',
+      'Prisma',
+      'Handlebars',
+      'RCON',
+    ],
+    images: ['/elitecore/landing.webp'],
+    sourceCodeFiles: 320,
+    languages: ['English'],
+    appUrl: 'https://elitecorepvp.com/',
+    sourceCodeUrl: 'https://github.com/imomaikel/elitecore-app',
   },
 ];
 

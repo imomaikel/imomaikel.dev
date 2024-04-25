@@ -41,7 +41,7 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
           </motion.div>
         </div>
         {/* Images */}
-        <div className="relative max-w-[calc(100vw-48px-32px)]">
+        <div className="relative max-w-[calc(100vw-48px-32px)] rounded-md ring-1 ring-white/15">
           <motion.div
             variants={bounceAnimation({ side: 'vertical', delay: 0.3 })}
             className="mt-14 aspect-video h-min shrink-0 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]"
@@ -94,10 +94,12 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
         {/* Description */}
         <motion.div
           variants={bounceAnimation({ side: 'vertical', delay: 0.4 })}
-          className="relative z-10 max-w-3xl space-y-2 text-justify text-muted-foreground"
+          className="relative z-10 max-w-3xl space-y-1.5 text-justify text-muted-foreground"
         >
           {description.map((entry, idx) => (
-            <p key={`description-${name}-${idx}`}>{entry}</p>
+            <p className="text-justify" key={`description-${name}-${idx}`}>
+              {entry}
+            </p>
           ))}
         </motion.div>
 

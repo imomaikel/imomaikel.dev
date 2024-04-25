@@ -190,6 +190,21 @@ export const PUBLIC_PROJECTS: {
     sourceCodeUrl: 'https://github.com/imomaikel/gainllery',
     appUrl: 'https://github.com/imomaikel/gainllery/releases',
   },
+  {
+    name: 'imomaikel.dev',
+    description: [
+      'Introducing my online portfolio website - a showcase of my professional journey and accomplishments as a software developer. Here, visitors can explore my public projects, read testimonials from satisfied clients and collaborators, and get in touch with me via a convenient contact form.',
+      'The website also provides insights into the tech stack I utilize, offering transparency into my approach to development. Additionally, visitors can learn more about me, my background, and my passion for creating innovative solutions through software.',
+      "Designed with functionality in mind, my portfolio website serves as a gateway for potential clients, employers, and fellow developers to discover my work and connect with me. Explore, engage, and let's embark on exciting opportunities together.",
+    ],
+    techStack: ['Next.js', 'React', 'Framer Motion', 'Prisma', 'Hook Form', 'Zod'],
+    images: ['/imomaikel.dev/landing.webp'],
+    // TODO
+    languages: ['English'],
+    sourceCodeFiles: 33,
+    sourceCodeUrl: 'https://github.com/imomaikel/imomaikel.dev',
+    appUrl: 'https://imomaikel.dev',
+  },
 ];
 
 export const NAV_ITEMS: TNavItem[] = [

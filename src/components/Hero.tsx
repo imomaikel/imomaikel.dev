@@ -93,7 +93,7 @@ const Hero = () => {
                 ease: [0.4, 0.0, 0.2, 1],
               }}
             >
-              <Image src="/signature.png" width={168} height={39} alt="signature" loading="eager" />
+              <Image src="/signature.webp" width={168} height={39} alt="signature" loading="eager" />
             </motion.div>
           </motion.div>
         </div>

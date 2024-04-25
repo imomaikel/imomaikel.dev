@@ -16,17 +16,27 @@ export const HeroHighlight = ({
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
-  function handleMouseMove({ currentTarget, clientX, clientY }: React.MouseEvent<HTMLDivElement>) {
+  const handleMouseMove = ({ currentTarget, clientX, clientY }: React.MouseEvent<HTMLDivElement>) => {
     if (!currentTarget) return;
-    let { left, top } = currentTarget.getBoundingClientRect();
+    const { left, top } = currentTarget.getBoundingClientRect();
 
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
-  }
+  };
+
+  const handleTouchMove = ({ currentTarget, touches }: React.TouchEvent<HTMLDivElement>) => {
+    if (!currentTarget) return;
+    const { left, top } = currentTarget.getBoundingClientRect();
+
+    mouseX.set(touches[0].clientX - left);
+    mouseY.set(touches[0].clientY - top);
+  };
+
   return (
     <div
       className={cn('group relative flex h-full w-full items-center justify-center', containerClassName)}
       onMouseMove={handleMouseMove}
+      onTouchMove={handleTouchMove}
     >
       <div className="pointer-events-none absolute inset-0 bg-dot-thick-neutral-300  dark:bg-dot-thick-neutral-800" />
       <motion.div

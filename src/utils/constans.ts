@@ -1,5 +1,6 @@
 import { TNavItem } from '@/components/ui/floating-navbar';
 import { FaHome, FaRegLightbulb } from 'react-icons/fa';
+import { BiMessageDetail } from 'react-icons/bi';
 
 export const HERO_TEXTS = [
   "Scroll Down and Let's Uncover the Possibilities Together!",
@@ -69,13 +70,30 @@ export const HERO_TEXTS = [
 
 export const HERO_TEXTS_INTERVAL = 4_000;
 
-type TECH_STACK = 'Next.js';
+const TECH_STACKS = [
+  'Next.js',
+  'Auth.js',
+  'CashBill',
+  'Drag and Drop',
+  'Hook Form',
+  'Prisma',
+  'Facebook Pixel',
+  'tRPC',
+  'bcrypt',
+  'Framer Motion',
+  'React',
+  'Nodemailer',
+  'Recharts',
+  'Zod',
+  'Zustand',
+] as const;
+type TTechStack = (typeof TECH_STACKS)[number];
 
 type TLanguage = 'Polish' | 'English';
 export const PUBLIC_PROJECTS: {
   name: string;
-  description: string;
-  techStack: TECH_STACK[];
+  description: string[];
+  techStack: TTechStack[];
   images: `/${string}`[];
   sourceCodeUrl: string;
   sourceCodeFiles: number;
@@ -83,26 +101,34 @@ export const PUBLIC_PROJECTS: {
   languages: TLanguage[];
 }[] = [
   {
-    name: 'Project #1',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    techStack: ['Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js', 'Next.js'],
-    images: ['/temp1.jpg', '/temp2.jpg', '/temp3.jpg'],
-    sourceCodeUrl: 'https://github.com',
-    appUrl: 'https://github.com',
-    sourceCodeFiles: 200,
-    languages: ['English', 'Polish'],
-  },
-  {
-    name: 'Project #1',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-    techStack: ['Next.js'],
-    images: ['/temp1.jpg', '/temp2.jpg', '/temp3.jpg'],
-    sourceCodeFiles: 100,
-    sourceCodeUrl: 'https://github.com',
-    appUrl: 'https://github.com',
+    name: 'Olejesawiniec',
+    description: [
+      'Introducing a web store tailored for the Polish market, offering a curated selection of 100% natural oils, seeds, and flour for home use. Developed for discerning consumers, the website ensures a seamless user experience, allowing easy browsing, filtering, and sorting of products.',
+      'Key features include integration with CashBill for secure payments, user account creation for wishlists, and a robust admin panel for comprehensive insights and control over operations. From sales tracking to user behavior analysis, the admin panel offers data-driven tools for business optimization.',
+      'As a software developer, my focus has been on crafting a solution that exceeds client requirements, promising a seamless shopping experience for Polish consumers seeking high-quality natural products for their homes.',
+    ],
+    techStack: [
+      'Next.js',
+      'Auth.js',
+      'tRPC',
+      'Nodemailer',
+      'CashBill',
+      'Facebook Pixel',
+      'React',
+      'Drag and Drop',
+      'Hook Form',
+      'Prisma',
+      'bcrypt',
+      'Framer Motion',
+      'Recharts',
+      'Zod',
+      'Zustand',
+    ],
+    images: ['/olejesawiniec/landing.webp', '/olejesawiniec/shop.webp', '/olejesawiniec/product.webp'],
+    sourceCodeFiles: 190,
     languages: ['Polish'],
+    appUrl: 'https://olejesawiniec.pl',
+    sourceCodeUrl: 'https://github.com/imomaikel/olejesawiniec',
   },
 ];
 

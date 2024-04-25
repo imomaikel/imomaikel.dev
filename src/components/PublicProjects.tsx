@@ -1,4 +1,5 @@
 'use client';
+import FullscreenImageProvider from './FullscreenImageProvider';
 import { PUBLIC_PROJECTS } from '@/utils/constans';
 import { TracingBeam } from './ui/tracing-beam';
 import ProjectShowcase from './ProjectShowcase';
@@ -16,11 +17,11 @@ const PublicProjects = () => {
           initial="hidden"
           variants={bounceAnimation({
             side: 'horizontal',
-            steps: [-200, 100, 60],
+            steps: [-200, 100, 0],
             duration: 1.25,
             initialOpacity: 0.5,
           })}
-          className="noTranslate text-3xl font-extrabold capitalize md:text-6xl"
+          className="noTranslate relative z-50 text-3xl font-extrabold capitalize md:text-6xl"
         >
           Public projects
         </motion.h3>
@@ -30,22 +31,24 @@ const PublicProjects = () => {
           initial="hidden"
           variants={bounceAnimation({
             side: 'horizontal',
-            steps: [100, -50, -20],
+            steps: [100, -50, 0],
             duration: 1.25,
             initialOpacity: 0.5,
           })}
-          className="noTranslate text-sm text-muted-foreground md:text-base"
+          className="noTranslate relative z-50 text-sm text-muted-foreground md:text-base"
         >
           Some of my projects that source code is shared on GitHub
         </motion.p>
       </motion.div>
-      <TracingBeam className="w-fit pl-8 3xl:pl-0">
-        <div className="flex flex-1 flex-col space-y-32">
-          {PUBLIC_PROJECTS.map((projectDetails) => (
-            <ProjectShowcase key={`project-${projectDetails.name}`} props={projectDetails} />
-          ))}
-        </div>
-      </TracingBeam>
+      <FullscreenImageProvider>
+        <TracingBeam className="w-fit pl-8 3xl:pl-0">
+          <div className="flex flex-1 flex-col space-y-32">
+            {PUBLIC_PROJECTS.map((projectDetails) => (
+              <ProjectShowcase key={`project-${projectDetails.name}`} props={projectDetails} />
+            ))}
+          </div>
+        </TracingBeam>
+      </FullscreenImageProvider>
     </SectionWrapper>
   );
 };

@@ -1,9 +1,11 @@
 'use client';
 import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from 'react-icons/io';
+import { FullscreenImageContext } from './FullscreenImageProvider';
 import { EffectCreative, Pagination } from 'swiper/modules';
+import { useContext, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { TfiFullscreen } from 'react-icons/tfi';
 import { bounceAnimation } from '@/lib/motion';
-import { useEffect, useState } from 'react';
 import { FaImage } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import type TSwiper from 'swiper';
@@ -18,6 +20,7 @@ type TImageSwiper = {
   urls: `/${string}`[];
 };
 const ImageSwiper = ({ urls }: TImageSwiper) => {
+  const { setIsOpen, setImgUrl } = useContext(FullscreenImageContext);
   const [swiper, setSwiper] = useState<null | TSwiper>();
   const [pagination, setPagination] = useState({
     isFirst: true,
@@ -35,6 +38,11 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
       });
     });
   }, [swiper, urls.length]);
+
+  const openFullscreen = (imgUrl: string) => {
+    setImgUrl(imgUrl);
+    setIsOpen(true);
+  };
 
   return (
     <div className="flex h-full w-full rounded-md bg-muted/50">
@@ -101,6 +109,14 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
           },
         }}
       >
+        <div
+          className="absolute right-2 top-2 z-50 rounded-lg bg-gray-300 p-1.5"
+          role="button"
+          aria-label="image fullscreen"
+          onClick={() => openFullscreen(urls[pagination.currentIndex - 1])}
+        >
+          <TfiFullscreen className="h-6 w-6 cursor-pointer text-black" />
+        </div>
         {urls.map((url) => (
           <SwiperSlide key={url}>
             <Image

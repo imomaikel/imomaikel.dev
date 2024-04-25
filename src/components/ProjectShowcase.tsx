@@ -55,17 +55,17 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
           className="w-full"
         >
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2 md:gap-4">
-            <Button className="space-x-3" variant="ghost" asChild>
-              <Link href={sourceCodeUrl}>
+            <Button className="space-x-3 !py-6" variant="ghost" asChild>
+              <Link href={appUrl}>
                 <FaExternalLinkAlt className="h-6 w-6" />
                 <div className="flex flex-col items-center justify-center">
-                  <span>Preview</span>
+                  <span>Open project</span>
                   <span className="text-xs text-muted-foreground">Try it yourself</span>
                 </div>
               </Link>
             </Button>
-            <Button className="space-x-3" variant="ghost" asChild>
-              <Link href={appUrl}>
+            <Button className="space-x-3 !py-6" variant="ghost" asChild>
+              <Link href={sourceCodeUrl}>
                 <FaGithub className="h-6 w-6" />
                 <div className="flex flex-col items-center justify-center">
                   <span>Source Code</span>
@@ -94,9 +94,11 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
         {/* Description */}
         <motion.div
           variants={bounceAnimation({ side: 'vertical', delay: 0.4 })}
-          className="relative z-10 max-w-3xl text-justify text-muted-foreground"
+          className="relative z-10 max-w-3xl space-y-2 text-justify text-muted-foreground"
         >
-          {description}
+          {description.map((entry, idx) => (
+            <p key={`description-${name}-${idx}`}>{entry}</p>
+          ))}
         </motion.div>
 
         {/* Tech Stack */}

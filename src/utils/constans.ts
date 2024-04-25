@@ -94,6 +94,9 @@ const TECH_STACKS = [
   'Handlebars',
   'Socket.io',
   'Tebex',
+  'Electron',
+  'Vite',
+  'Zoom Pan Pinch',
 ] as const;
 type TTechStack = (typeof TECH_STACKS)[number];
 
@@ -165,11 +168,27 @@ export const PUBLIC_PROJECTS: {
       'Handlebars',
       'RCON',
     ],
+    // TODO
     images: ['/elitecore/landing.webp'],
     sourceCodeFiles: 320,
     languages: ['English'],
     appUrl: 'https://elitecorepvp.com/',
     sourceCodeUrl: 'https://github.com/imomaikel/elitecore-app',
+  },
+  {
+    name: 'Gainllery',
+    description: [
+      'Presenting an innovative application designed for both Windows and Linux platforms, aimed at seamlessly viewing images and videos. The application not only allows effortless browsing of media files but also enables users to zoom in on videos while they are playing - a unique feature that enhances the viewing experience.',
+      'Currently in the developmental phase, this project is continually evolving. In the pipeline are additional features such as file sorting, deletion capabilities, user settings customization, and much more.',
+      'Through this project, I am not only exploring my passion for software development but also striving to create a user-friendly solution that enhances the way individuals interact with their media files. Stay tuned for updates as the project progresses towards its full potential.',
+    ],
+    techStack: ['Electron', 'React', 'Framer Motion', 'Vite', 'Zoom Pan Pinch'],
+    images: ['/gainllery/landing.webp', '/gainllery/image.webp', '/gainllery/video.webp'],
+    // TODO
+    languages: ['English'],
+    sourceCodeFiles: 30,
+    sourceCodeUrl: 'https://github.com/imomaikel/gainllery',
+    appUrl: 'https://github.com/imomaikel/gainllery/releases',
   },
 ];
 

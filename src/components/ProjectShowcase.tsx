@@ -17,22 +17,34 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
 
   return (
     <motion.div
-      whileInView="show"
-      initial="hidden"
-      variants={{
-        hidden: {},
-        show: {},
-      }}
-      viewport={{ once: true }}
+      // whileInView="show"
+      // initial="hidden"
+      // variants={{
+      //   hidden: {},
+      //   show: {},
+      // }}
+      // viewport={{ once: true }}
       className="flex flex-col space-y-2 md:flex-row md:space-x-4 md:space-y-0"
     >
       <motion.div className="space-y-2">
         {/* Mobile name */}
         <div className="flex flex-col items-center space-x-4 space-y-2 md:hidden">
-          <motion.h4 variants={bounceAnimation({ side: 'vertical', delay: 0.2 })} className="text-4xl font-bold">
+          <motion.h4
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={bounceAnimation({ side: 'vertical', delay: 0.2 })}
+            className="text-4xl font-bold"
+          >
             {name}
           </motion.h4>
-          <motion.div variants={staggerContainer(0.1, 0.3)} className="flex space-x-1">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={staggerContainer(0.1, 0.3)}
+            className="flex space-x-1"
+          >
             {languages.map((language) => (
               <motion.div variants={bounceAnimation({ side: 'horizontal' })} key={`mobile-${name}${language}`}>
                 <Badge variant="secondary">{language}</Badge>
@@ -43,6 +55,9 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
         {/* Images */}
         <div className="relative max-w-[calc(100vw-48px-32px)] rounded-md">
           <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
             variants={bounceAnimation({ side: 'vertical', delay: 0.3 })}
             className="mt-14 aspect-video h-min shrink-0 rounded-md ring-1 ring-white/15 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]"
           >
@@ -51,6 +66,9 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
         </div>
         {/* Links */}
         <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           variants={bounceAnimation({ side: 'vertical', delay: 0.6, steps: [-60, 10, 0] })}
           className="w-full"
         >
@@ -79,12 +97,24 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
       <motion.div className="relative space-y-2">
         {/* Desktop Name */}
         <motion.div className="relative z-10 hidden items-center space-x-4 md:flex">
-          <motion.h4 variants={bounceAnimation({ side: 'vertical', delay: 0.2 })} className="text-4xl font-bold">
+          <motion.h4
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={bounceAnimation({ side: 'vertical', delay: 0.2 })}
+            className="text-4xl font-bold"
+          >
             {name}
           </motion.h4>
           <motion.div variants={staggerContainer(0.1, 0.3)} className="flex space-x-1">
             {languages.map((language) => (
-              <motion.div variants={bounceAnimation({ side: 'horizontal' })} key={`${name}${language}`}>
+              <motion.div
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
+                variants={bounceAnimation({ side: 'horizontal' })}
+                key={`${name}${language}`}
+              >
                 <Badge variant="secondary">{language}</Badge>
               </motion.div>
             ))}
@@ -93,6 +123,9 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
 
         {/* Description */}
         <motion.div
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true }}
           variants={bounceAnimation({ side: 'vertical', delay: 0.4 })}
           className="relative z-10 max-w-3xl space-y-1.5 text-justify text-muted-foreground"
         >
@@ -105,10 +138,22 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
 
         {/* Tech Stack */}
         <motion.div className="relative z-10 space-y-1">
-          <motion.p variants={bounceAnimation({ side: 'vertical', delay: 0.5 })} className="text-sm font-semibold">
+          <motion.p
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={bounceAnimation({ side: 'vertical', delay: 0.5 })}
+            className="text-sm font-semibold"
+          >
             Tech Stack
           </motion.p>
-          <motion.div variants={staggerContainer(0.15, 0.6)} className="flex flex-wrap gap-1">
+          <motion.div
+            initial="hidden"
+            whileInView="show"
+            viewport={{ once: true }}
+            variants={staggerContainer(0.15, 0.6)}
+            className="flex flex-wrap gap-1"
+          >
             {techStack.map((text, index) => (
               <motion.div key={`name-${text}${index}`} variants={bounceAnimation({ side: 'horizontal' })}>
                 <Badge>{text}</Badge>

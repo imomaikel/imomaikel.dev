@@ -30,16 +30,18 @@ const FullscreenImageProvider = ({ children }: TFullscreenImageProvider) => {
       {children}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="z-[10000] h-auto max-h-[90vh] w-max max-w-[90vw] bg-transparent p-0" noCloseButton>
-          <div className="relative h-full max-h-[90vh] rounded-lg">
-            <Image
-              alt="project image"
-              src={imgUrl || ''}
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="h-full w-full rounded-lg object-contain"
-            />
+        <DialogContent className="z-[10000] flex h-auto max-h-[90vh] w-max max-w-[90vw] p-0 outline-none" noCloseButton>
+          <div className="relative max-h-[90vh] max-w-[90vw] rounded-lg">
+            <div className="relative">
+              <Image
+                alt="project image"
+                src={imgUrl || ''}
+                width={0}
+                height={0}
+                sizes="100vw"
+                className="h-full max-h-[90vh] w-full max-w-[90vw] rounded-lg object-contain"
+              />
+            </div>
           </div>
           <div
             className="absolute right-2 top-2 z-50 rounded-lg bg-destructive p-1.5"

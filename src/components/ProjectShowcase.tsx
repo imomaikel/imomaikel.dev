@@ -41,10 +41,10 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
           </motion.div>
         </div>
         {/* Images */}
-        <div className="relative max-w-[calc(100vw-48px-32px)] rounded-md ring-1 ring-white/15">
+        <div className="relative max-w-[calc(100vw-48px-32px)] rounded-md">
           <motion.div
             variants={bounceAnimation({ side: 'vertical', delay: 0.3 })}
-            className="mt-14 aspect-video h-min shrink-0 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]"
+            className="mt-14 aspect-video h-min shrink-0 rounded-md ring-1 ring-white/15 md:mt-0 md:w-96 lg:w-[420px] xl:w-[640px]"
           >
             <ImageSwiper urls={images} />
           </motion.div>

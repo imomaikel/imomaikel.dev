@@ -143,4 +143,9 @@ export const NAV_ITEMS: TNavItem[] = [
     name: 'Projects',
     icon: FaRegLightbulb,
   },
+  {
+    link: '#get-in-touch',
+    name: 'Contact',
+    icon: BiMessageDetail,
+  },
 ];

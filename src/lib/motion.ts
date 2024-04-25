@@ -1,6 +1,6 @@
 type TBounceAnimation = {
   side: 'vertical' | 'horizontal';
-  steps?: number[];
+  steps?: (number | string)[];
   duration?: number;
   delay?: number;
   ease?: string | number[];

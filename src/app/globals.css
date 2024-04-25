@@ -49,6 +49,19 @@
   @apply bg-muted-foreground;
 }
 
+#parallax-photos::-webkit-scrollbar {
+  @apply w-[12px];
+}
+#parallax-photos::-webkit-scrollbar-track {
+  @apply rounded-md;
+}
+#parallax-photos::-webkit-scrollbar-thumb {
+  @apply rounded-md bg-muted-foreground;
+}
+#parallax-photos::-webkit-scrollbar-thumb:hover {
+  @apply bg-primary;
+}
+
 .absoluteCenter {
   @apply left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2;
 }

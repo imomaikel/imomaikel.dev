@@ -1,6 +1,7 @@
 import { TNavItem } from '@/components/ui/floating-navbar';
 import { FaHome, FaRegLightbulb } from 'react-icons/fa';
 import { BiMessageDetail } from 'react-icons/bi';
+import { IoCodeSlash } from 'react-icons/io5';
 
 export const HERO_TEXTS = [
   "Scroll Down and Let's Uncover the Possibilities Together!",
@@ -223,4 +224,36 @@ export const NAV_ITEMS: TNavItem[] = [
     name: 'Contact',
     icon: BiMessageDetail,
   },
+  {
+    link: '#code-snippets',
+    name: 'Code',
+    icon: IoCodeSlash,
+  },
+];
+
+export const CODE_SNIPPETS = [
+  '/snippets/14.png',
+  '/snippets/4.png',
+  '/snippets/17.png',
+  '/snippets/21.png',
+  '/snippets/3.png',
+  '/snippets/20.png',
+  '/snippets/6.png',
+  '/snippets/15.png',
+  '/snippets/12.png',
+  '/snippets/10.png',
+  '/snippets/1.png',
+  '/snippets/24.png',
+  '/snippets/16.png',
+  '/snippets/8.png',
+  '/snippets/5.png',
+  '/snippets/9.png',
+  '/snippets/11.png',
+  '/snippets/7.png',
+  '/snippets/2.png',
+  '/snippets/13.png',
+  '/snippets/23.png',
+  '/snippets/19.png',
+  '/snippets/22.png',
+  '/snippets/18.png',
 ];

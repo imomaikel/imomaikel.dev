@@ -26,6 +26,12 @@ const ImageZoom = ({ src, mobileView }: TImageZoom) => {
       wheel={{ step: 0.2, smoothStep: 0.003 }}
       maxScale={4}
       disablePadding
+      onWheelStart={(ref, event) => {
+        const dY = event.deltaY;
+        if (ref.state.scale === 1 && dY >= 1) {
+          window.scrollBy(0, dY);
+        }
+      }}
     >
       <TransformComponent wrapperClass="rounded-lg cursor-grab">
         <Image

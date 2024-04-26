@@ -2,6 +2,7 @@ import { TNavItem } from '@/components/ui/floating-navbar';
 import { FaHome, FaRegLightbulb } from 'react-icons/fa';
 import { BiMessageDetail } from 'react-icons/bi';
 import { IoCodeSlash } from 'react-icons/io5';
+import { ImStatsDots } from 'react-icons/im';
 
 export const HERO_TEXTS = [
   "Scroll Down and Let's Uncover the Possibilities Together!",
@@ -225,8 +226,13 @@ export const NAV_ITEMS: TNavItem[] = [
     icon: BiMessageDetail,
   },
   {
+    link: '#statistics',
+    name: 'Stats',
+    icon: ImStatsDots,
+  },
+  {
     link: '#code-snippets',
-    name: 'Code',
+    name: 'Snippets',
     icon: IoCodeSlash,
   },
 ];

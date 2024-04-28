@@ -121,8 +121,8 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
           <SwiperSlide key={url}>
             <Image
               src={url}
-              width={0}
-              height={0}
+              width={640}
+              height={360}
               className="h-full w-full rounded-md object-fill"
               sizes="100vw"
               alt=""

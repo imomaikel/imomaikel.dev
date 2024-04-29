@@ -4,11 +4,14 @@ import { HeroHighlight, Highlight } from './ui/hero-highlight';
 import { BiSolidChevronsDown } from 'react-icons/bi';
 import HeroTypewriter from './HeroTypewriter';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const t = useTranslations('Hero');
+  const heroHeader = t.raw('header') as { text: string; highlight: boolean; duration: number }[];
 
   useEffect(() => setIsMounted(true), []);
 
@@ -34,14 +37,16 @@ const Hero = () => {
           className="text-center"
         >
           <div className="space-x-2 text-xl font-bold leading-[36px] md:text-4xl md:leading-[56px] lg:text-5xl lg:leading-[76px] 2xl:leading-loose">
-            <span>Your</span>
-            <Highlight duration={0.75}>place</Highlight>
-            <span>to transform</span>
-            <span>ideas into</span>
-            <span>a</span>
-            <Highlight duration={1} className="text-nowrap">
-              digital masterpiece
-            </Highlight>
+            {heroHeader.map((entry, idx) => {
+              if (entry.highlight) {
+                return (
+                  <Highlight duration={entry.duration} key={`ext-${idx}`} className="text-nowrap">
+                    {entry.text}
+                  </Highlight>
+                );
+              }
+              return <span key={`ext-${idx}`}>{entry.text}</span>;
+            })}
           </div>
         </motion.h1>
         <motion.h2
@@ -77,7 +82,7 @@ const Hero = () => {
               }}
               className="text-xs font-semibold tracking-wide text-muted-foreground md:text-sm"
             >
-              Quality provided by
+              {t('qualityProvidedBy')}
             </motion.span>
             <motion.div
               initial={{
@@ -119,7 +124,7 @@ const Hero = () => {
             as="button"
           >
             <BiSolidChevronsDown className="mr-2 h-8 w-8" />
-            <span className="font-bold">Explore More</span>
+            <span className="font-bold">{t('exploreMore')}</span>
           </HoverBorderGradient>
         </motion.div>
       </HeroHighlight>

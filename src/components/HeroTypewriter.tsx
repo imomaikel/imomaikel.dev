@@ -1,19 +1,22 @@
-import { HERO_TEXTS, HERO_TEXTS_INTERVAL } from '@/utils/constans';
 import { TypewriterEffectSmooth } from './ui/typewriter-effect';
+import { HERO_TEXTS_INTERVAL } from '@/utils/constans';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
 
-const getRandomIndex = (currentIndex: number): number => {
-  const randomIndex = Math.floor(Math.random() * HERO_TEXTS.length);
-  if (randomIndex === currentIndex) return getRandomIndex(currentIndex);
+const getRandomIndex = (currentIndex: number, texts: string[]): number => {
+  const randomIndex = Math.floor(Math.random() * texts.length);
+  if (randomIndex === currentIndex) return getRandomIndex(currentIndex, texts);
   return randomIndex;
 };
 
 const HeroTypewriter = () => {
   const [textIndex, setTextIndex] = useState(-1);
+  const t = useTranslations('Hero');
+  const texts = t.raw('texts') as string[];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setTextIndex(getRandomIndex(textIndex));
+      setTextIndex(getRandomIndex(textIndex, texts));
     }, HERO_TEXTS_INTERVAL);
 
     return () => clearInterval(interval);
@@ -23,7 +26,7 @@ const HeroTypewriter = () => {
     <TypewriterEffectSmooth
       duration={1.25}
       delay={textIndex === -1 ? 1 : 0}
-      words={HERO_TEXTS[textIndex === -1 ? 0 : textIndex]}
+      sentence={texts[textIndex === -1 ? 0 : textIndex]}
       index={textIndex}
     />
   );

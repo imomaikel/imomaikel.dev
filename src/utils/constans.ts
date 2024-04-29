@@ -104,8 +104,7 @@ export const PUBLIC_PROJECTS: {
       'Handlebars',
       'RCON',
     ],
-    // TODO
-    images: ['/elitecore/landing.webp'],
+    images: ['/elitecore/landing.webp', '/elitecore/shop.webp', '/elitecore/product.webp', '/elitecore/ticket.webp'],
     sourceCodeFiles: 320,
     languages: ['English'],
     appUrl: 'https://elitecorepvp.com/',

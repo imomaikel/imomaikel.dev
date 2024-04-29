@@ -1,10 +1,11 @@
+'use server';
 import PublicProjects from '@/components/PublicProjects';
 import CodeSnippets from '@/components/CodeSnippets';
 import CodingStats from '@/components/CodingStats';
 import GetInTouch from '@/components/GetInTouch';
 import Hero from '@/components/Hero';
 
-export default function Home() {
+export default async function Home() {
   return (
     <div className="flex flex-col">
       <section>

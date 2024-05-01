@@ -2,6 +2,7 @@
 import { FaDiscord, FaGithub } from 'react-icons/fa6';
 import { bounceAnimation } from '@/lib/motion';
 import SectionWrapper from './SectionWrapper';
+import { useTranslations } from 'next-intl';
 import { BiMailSend } from 'react-icons/bi';
 import OnlineStatus from './OnlineStatus';
 import MessageForm from './MessageForm';
@@ -9,6 +10,8 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const GetInTouch = () => {
+  const t = useTranslations('GetInTouch');
+
   return (
     <SectionWrapper>
       <motion.div className="mb-24 space-y-2 text-center">
@@ -24,7 +27,7 @@ const GetInTouch = () => {
           })}
           className="noTranslate relative z-50 text-3xl font-extrabold capitalize md:text-6xl"
         >
-          Get in touch
+          {t('header')}
         </motion.h3>
         <motion.p
           viewport={{ once: true }}
@@ -38,12 +41,12 @@ const GetInTouch = () => {
           })}
           className="noTranslate relative z-50 text-sm text-muted-foreground md:text-base"
         >
-          Ask anything. Discuss everything.
+          {t('description')}
         </motion.p>
       </motion.div>
       <div className="flex flex-col justify-center space-y-12 md:flex-row md:space-x-12 md:space-y-0">
         <div className="w-full max-w-sm">
-          <span className="text-2xl font-medium">Send a message</span>
+          <span className="text-2xl font-medium">{t('sendMessage')}</span>
           <div>
             <MessageForm />
           </div>
@@ -57,7 +60,7 @@ const GetInTouch = () => {
                 <div className="flex flex-col">
                   <span>imomaikel</span>
                   <Link href="https://github.com/imomaikel" className="text-sm text-muted-foreground hover:underline">
-                    Click to open
+                    {t('clickToOpen')}
                   </Link>
                 </div>
               </div>

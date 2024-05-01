@@ -84,5 +84,23 @@
     "description": "Prezentacja mojego kodu",
     "hint": "Użyj scroll'a aby przybliżyć zdjęcie"
   },
-  "GetInTouch": {}
+  "GetInTouch": {
+    "header": "Skontaktuj się",
+    "description": "Zapytaj o cokolwiek. Omówmy wszystko.",
+    "sendMessage": "Wyślij wiadomość",
+    "contact": "Kontakt",
+    "clickToOpen": "Kliknij aby otworzyć",
+    "firstName": "Imię:",
+    "lastName": "Nazwisko:",
+    "email": "Email:",
+    "subject": "Temat:",
+    "message": "Wiadomość:",
+    "submit": "Wyślij",
+    "onlineStatus": "Status Dostępności",
+    "onlineStatusHint": "Najedź kursorem, aby sprawdzić czy jestem dostępny.",
+    "available": "Odpowiedź może być szybka",
+    "notAvailable": "Odpowiedź może chwilę zająć",
+    "online": "Dostępny",
+    "offline": "Niedostępny"
+  }
 }

@@ -83,5 +83,23 @@
     "description": "Showcase of my coding style",
     "hint": "Use scroll to zoom the code"
   },
-  "GetInTouch": {}
+  "GetInTouch": {
+    "header": "Get in touch",
+    "description": "Ask anything. Discuss everything.",
+    "sendMessage": "Send a message",
+    "contact": "Contact",
+    "clickToOpen": "Click to open",
+    "firstName": "First name:",
+    "lastName": "Last name:",
+    "email": "Email:",
+    "subject": "Subject:",
+    "message": "Message:",
+    "submit": "Submit",
+    "onlineStatus": "Online Status",
+    "onlineStatusHint": "Find out if I am online now by hovering over this section.",
+    "available": "The response can be quick",
+    "notAvailable": "The response may take a moment",
+    "online": "Online",
+    "offline": "Offline"
+  }
 }

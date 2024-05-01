@@ -5,6 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { AnimatedInput } from './ui/animated-input';
 import { useForm } from 'react-hook-form';
 import { Button } from './ui/button';
+import { useTranslations } from 'next-intl';
 
 const MessageForm = () => {
   const form = useForm<TMessageFormSchema>({
@@ -17,6 +18,7 @@ const MessageForm = () => {
       name: '',
     },
   });
+  const t = useTranslations('GetInTouch');
 
   const onSubmit = (values: TMessageFormSchema) => {
     console.log(values);
@@ -31,7 +33,7 @@ const MessageForm = () => {
             name="name"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>First name:</FormLabel>
+                <FormLabel>{t('firstName')}</FormLabel>
                 <FormControl>
                   <AnimatedInput {...field} />
                 </FormControl>
@@ -44,7 +46,7 @@ const MessageForm = () => {
             name="surname"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Last name:</FormLabel>
+                <FormLabel>{t('lastName')}</FormLabel>
                 <FormControl>
                   <AnimatedInput {...field} />
                 </FormControl>
@@ -57,7 +59,7 @@ const MessageForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Email:</FormLabel>
+                <FormLabel>{t('email')}</FormLabel>
                 <FormControl>
                   <AnimatedInput {...field} />
                 </FormControl>
@@ -70,7 +72,7 @@ const MessageForm = () => {
             name="subject"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Subject:</FormLabel>
+                <FormLabel>{t('subject')}</FormLabel>
                 <FormControl>
                   <AnimatedInput {...field} />
                 </FormControl>
@@ -83,7 +85,7 @@ const MessageForm = () => {
             name="message"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Message:</FormLabel>
+                <FormLabel>{t('message')}</FormLabel>
                 <FormControl>
                   <AnimatedTextarea {...field} rows={7} className="h-auto resize-none" />
                 </FormControl>
@@ -92,7 +94,7 @@ const MessageForm = () => {
             )}
           />
           <Button className="!mt-3 w-full" type="submit" disabled>
-            Submit
+            {t('submit')}
           </Button>
         </form>
       </Form>

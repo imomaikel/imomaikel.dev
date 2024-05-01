@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
+import { useTranslations } from 'next-intl';
 
 export const PinContainer = ({
   children,
@@ -59,14 +60,18 @@ export const PinContainer = ({
 };
 
 export const PinPerspective = ({ status }: { status: 'Online' | 'Offline' }) => {
+  const t = useTranslations('GetInTouch');
+
   return (
     <motion.div className="pointer-events-none  z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-500 group-hover/pin:opacity-100">
       <div className=" inset-0 -mt-7 h-full w-full  flex-none">
         <div className="absolute inset-x-0 top-0  flex justify-center">
           <div className="relative z-10 flex flex-col items-center rounded-full bg-zinc-950 px-4 py-0.5 ring-1 ring-white/10">
-            <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">{status}!</span>
+            <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">
+              {status === 'Offline' ? t('offline') : t('online')}!
+            </span>
             <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-muted-foreground">
-              {status === 'Online' ? 'The response can be quick' : 'The response may take a moment'}
+              {status === 'Online' ? t('available') : t('notAvailable')}
             </span>
 
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>

@@ -2,6 +2,7 @@
 import { IoIosCheckmarkCircle, IoIosCloseCircle } from 'react-icons/io';
 import { HiStatusOnline } from 'react-icons/hi';
 import { FaQuestion } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 import { PinContainer } from './ui/3d-pin';
 import { useState } from 'react';
 import { cn } from '@/lib/utils';
@@ -10,16 +11,15 @@ const TEMP_STATUS: 'Online' | 'Offline' = 'Offline';
 
 const OnlineStatus = () => {
   const [hovered, setIsHovered] = useState(false);
+  const t = useTranslations('GetInTouch');
 
   return (
     <div className="relative flex h-full w-full">
       <PinContainer onHoverEnd={() => setIsHovered(false)} onHoverStart={() => setIsHovered(true)} status={TEMP_STATUS}>
         <div className="flex h-[20rem] w-[22rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 ">
-          <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">Online Status</h3>
+          <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">{t('onlineStatus')}</h3>
           <div className="!m-0 !p-0 text-base font-normal">
-            <span className="text-sm text-muted-foreground">
-              Find out if I am online now by hovering over this section.
-            </span>
+            <span className="text-sm text-muted-foreground">{t('onlineStatusHint')}</span>
           </div>
 
           <div

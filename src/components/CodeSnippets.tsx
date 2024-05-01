@@ -4,9 +4,12 @@ import { CODE_SNIPPETS } from '@/utils/constans';
 import { FaRegLightbulb } from 'react-icons/fa';
 import { bounceAnimation } from '@/lib/motion';
 import SectionWrapper from './SectionWrapper';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
 const CodeSnippets = () => {
+  const t = useTranslations('CodeSnippets');
+
   return (
     <SectionWrapper>
       <motion.div className="mb-24 space-y-2 text-center">
@@ -22,7 +25,7 @@ const CodeSnippets = () => {
           })}
           className="noTranslate relative z-50 text-3xl font-extrabold capitalize md:text-6xl"
         >
-          Code Snippets
+          {t('header')}
         </motion.h3>
         <motion.p
           viewport={{ once: true }}
@@ -36,13 +39,13 @@ const CodeSnippets = () => {
           })}
           className="noTranslate relative z-50 text-sm text-muted-foreground md:text-base"
         >
-          Showcase of my coding style
+          {t('description')}
         </motion.p>
       </motion.div>
       <div className="w-fit rounded-md bg-muted/40 p-5 md:p-10">
         <div className="mb-6 hidden items-center justify-center space-x-2 font-medium md:flex">
           <FaRegLightbulb className="h-6 w-6" />
-          <p>Use scroll to zoom the code</p>
+          <p>{t('hint')}</p>
         </div>
         <ParallaxScroll images={CODE_SNIPPETS} />
       </div>

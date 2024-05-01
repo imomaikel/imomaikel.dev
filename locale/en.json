@@ -78,6 +78,10 @@
   },
   "CodingStats": {},
   "PublicProjects": {},
-  "CodeSnippets": {},
+  "CodeSnippets": {
+    "header": "Code Snippets",
+    "description": "Showcase of my coding style",
+    "hint": "Use scroll to zoom the code"
+  },
   "GetInTouch": {}
 }

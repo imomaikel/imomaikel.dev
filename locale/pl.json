@@ -79,6 +79,10 @@
   },
   "CodingStats": {},
   "PublicProjects": {},
-  "CodeSnippets": {},
+  "CodeSnippets": {
+    "header": "Fragmenty Kodu",
+    "description": "Prezentacja mojego kodu",
+    "hint": "Użyj scroll'a aby przybliżyć zdjęcie"
+  },
   "GetInTouch": {}
 }

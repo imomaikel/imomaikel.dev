@@ -4,8 +4,11 @@ import CodeSnippets from '@/components/CodeSnippets';
 import CodingStats from '@/components/CodingStats';
 import GetInTouch from '@/components/GetInTouch';
 import Hero from '@/components/Hero';
+import prisma from '@/lib/prisma';
 
 export default async function Home() {
+  const wakaData = await prisma.wakaEntry.findMany();
+
   return (
     <div className="flex flex-col">
       <section>
@@ -13,7 +16,7 @@ export default async function Home() {
       </section>
 
       <section id="statistics">
-        <CodingStats />
+        <CodingStats data={wakaData} />
       </section>
 
       <section id="public-projects">

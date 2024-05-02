@@ -6,6 +6,7 @@ import { useContext, useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { TfiFullscreen } from 'react-icons/tfi';
 import { bounceAnimation } from '@/lib/motion';
+import { useTranslations } from 'next-intl';
 import { FaImage } from 'react-icons/fa6';
 import { motion } from 'framer-motion';
 import type TSwiper from 'swiper';
@@ -14,7 +15,6 @@ import Image from 'next/image';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
 
 type TImageSwiper = {
   urls: `/${string}`[];
@@ -22,6 +22,7 @@ type TImageSwiper = {
 const ImageSwiper = ({ urls }: TImageSwiper) => {
   const { setIsOpen, setImgUrl } = useContext(FullscreenImageContext);
   const [swiper, setSwiper] = useState<null | TSwiper>();
+  const m = useTranslations('PublicProjects.Misc');
   const [pagination, setPagination] = useState({
     isFirst: true,
     isLast: urls.length >= 2 ? false : true,
@@ -79,13 +80,10 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
                 <IoIosArrowDroprightCircle className="h-6 w-6" />
               </div>
             </div>
-            <span className="text-xs text-muted-foreground">Grab or use controls to sweep images</span>
+            <span className="text-xs text-muted-foreground">{m('ImageHint')}</span>
           </div>
           <div className="flex items-center justify-end space-x-1 text-sm text-muted-foreground md:justify-normal md:pr-6">
-            <span>Photo</span>
-            <span>{pagination.currentIndex}</span>
-            <span>of</span>
-            <span>{urls.length}</span>
+            <span>{m('PhotoOneOf', { current: pagination.currentIndex, total: urls.length })}</span>
             <FaImage className="!ml-2 h-6 w-6 animate-bounce" />
           </div>
         </div>

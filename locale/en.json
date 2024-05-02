@@ -78,7 +78,51 @@
     "switchLanguage": "Select Your Language"
   },
   "CodingStats": {},
-  "PublicProjects": {},
+  "PublicProjects": {
+    "header": "Public Projects",
+    "description": "Some of my projects that source code is shared on GitHub",
+    "Misc": {
+      "Polish": "Polish",
+      "English": "English",
+      "OpenProject": "Open Project",
+      "TryItYourself": "Try It Yourself",
+      "SourceCode": "Source Code",
+      "FileCount": "Over {count} files",
+      "TechStack": "Tech Stack",
+      "ImageHint": "Grab or use controls to sweep images",
+      "PhotoOneOf": "Photo {current} of {total}"
+    },
+    "Oleje Sawiniec": {
+      "description": [
+        "Introducing a web store tailored for the Polish market, offering a curated selection of 100% natural oils, seeds, and flour for home use. Developed for discerning consumers, the website ensures a seamless user experience, allowing easy browsing, filtering, and sorting of products.",
+        "Key features include integration with CashBill for secure payments, user account creation for wishlists, and a robust admin panel for comprehensive insights and control over operations. From sales tracking to user behavior analysis, the admin panel offers data-driven tools for business optimization.",
+        "As a software developer, my focus has been on crafting a solution that exceeds client requirements, promising a seamless shopping experience for Polish consumers seeking high-quality natural products for their homes."
+      ]
+    },
+    "EliteCore": {
+      "description": [
+        "This project, initiated in March 2019 during my early stages as a software developer, has been an ongoing evolution. It revolves around a web store and web panel for the game \"ARK: Survival Evolved & Ascended\"",
+        "The web panel provides users with access to their in-game logs and the ability to open tickets automatically on Discord. It also enables real-time messaging on both the website and Discord via socket.io.",
+        "An essential aspect of the project is the admin panel, granting administrators control over the website, Discord bot behavior, and configuration adjustments.",
+        "The focal point of the website is the web store, integrated with the Tebex Headless API. Here, users can purchase items and seamlessly receive them in-game.",
+        "Throughout its development, this project has allowed me to hone my skills as a software developer, tackling complex functionalities and integrating various technologies to create a comprehensive solution for the gaming community."
+      ]
+    },
+    "Gainllery": {
+      "description": [
+        "Presenting an innovative application designed for both Windows and Linux platforms, aimed at seamlessly viewing images and videos. The application not only allows effortless browsing of media files but also enables users to zoom in on videos while they are playing - a unique feature that enhances the viewing experience.",
+        "Currently in the developmental phase, this project is continually evolving. In the pipeline are additional features such as file sorting, deletion capabilities, user settings customization, and much more.",
+        "Through this project, I am not only exploring my passion for software development but also striving to create a user-friendly solution that enhances the way individuals interact with their media files. Stay tuned for updates as the project progresses towards its full potential."
+      ]
+    },
+    "imomaikel dev": {
+      "description": [
+        "Introducing my online portfolio website - a showcase of my professional journey and accomplishments as a software developer. Here, visitors can explore my public projects, read testimonials from satisfied clients and collaborators, and get in touch with me via a convenient contact form.",
+        "The website also provides insights into the tech stack I utilize, offering transparency into my approach to development. Additionally, visitors can learn more about me, my background, and my passion for creating innovative solutions through software.",
+        "Designed with functionality in mind, my portfolio website serves as a gateway for potential clients, employers, and fellow developers to discover my work and connect with me. Explore, engage, and let's embark on exciting opportunities together."
+      ]
+    }
+  },
   "CodeSnippets": {
     "header": "Code Snippets",
     "description": "Showcase of my coding style",

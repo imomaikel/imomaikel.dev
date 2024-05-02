@@ -5,9 +5,12 @@ import { TracingBeam } from './ui/tracing-beam';
 import ProjectShowcase from './ProjectShowcase';
 import { bounceAnimation } from '@/lib/motion';
 import SectionWrapper from './SectionWrapper';
+import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
 
 const PublicProjects = () => {
+  const t = useTranslations('PublicProjects');
+
   return (
     <SectionWrapper>
       <motion.div className="mb-24 space-y-2 text-center">
@@ -23,7 +26,7 @@ const PublicProjects = () => {
           })}
           className="noTranslate relative z-50 text-3xl font-extrabold capitalize md:text-6xl"
         >
-          Public projects
+          {t('header')}
         </motion.h3>
         <motion.p
           viewport={{ once: true }}
@@ -37,7 +40,7 @@ const PublicProjects = () => {
           })}
           className="noTranslate relative z-50 text-sm text-muted-foreground md:text-base"
         >
-          Some of my projects that source code is shared on GitHub
+          {t('description')}
         </motion.p>
       </motion.div>
       <FullscreenImageProvider>

@@ -79,7 +79,51 @@
     "switchLanguage": "Wybierz Swój Język"
   },
   "CodingStats": {},
-  "PublicProjects": {},
+  "PublicProjects": {
+    "header": "Publiczne Projekty",
+    "description": "Kilka z moich projektów których kod jest dostępny na GitHub",
+    "Misc": {
+      "Polish": "Polski",
+      "English": "Angielski",
+      "OpenProject": "Otwórz projekt",
+      "TryItYourself": "Przetestuj działanie",
+      "SourceCode": "Kod źródłowy",
+      "FileCount": "Ponad {count} plików",
+      "TechStack": "Technologie",
+      "ImageHint": "Złap lub użyj przycisków aby zmienić zdjęcie",
+      "PhotoOneOf": "Zdjęcie {current} z {total}"
+    },
+    "Oleje Sawiniec": {
+      "description": [
+        "Przedstawiam sklep internetowy, przygotowany pod Polski rynek, oferujący 100% naturalne oleje, nasiona oraz mąki. Zaprojektowany z myślą o klientach, z wygodnym systemem wyszukiwania, filtrowania czy sortowania produktów.",
+        "Główne funkcje to integracja z systemem CashBill, aby zapewnić bezpieczne płatności, tworzenie kont, listy życzeń, oraz rozbudowany panel administracyjny zapewniający pełną kontrole nad produktami oraz widok na statystyki, wspomagający optymalizacje biznesowe.",
+        "Jako programista, skupiłem się na takim rozwiązaniu, aby spełniało one potrzeby klientów, i zapewniały pozytywne wrażenia z zakupów na stronie, dla ludzi którzy szukają wysokojakościowych produktów do ich domów."
+      ]
+    },
+    "EliteCore": {
+      "description": [
+        "Projekt ten rozpoczął się w 2019 roku, kiedy zaczynałem swoją przygodę z programowaniem, od tego czasu ten projekt się nieustannie rozwijał. Jest to sklep internetowy wraz z panelem do gry \"ARK: Survival Evolved & Ascended\"",
+        "Panel umożliwia użytkownikom dostęþ do podglądu ich wydarzeń z gry oraz do tworzenia biletów na stronie, a czat jest synchronizowany na żywo na aplikacji Discord, za pomocą socket.io",
+        "Ważną część tego projektu stanowi panel administracyjny, pozwalający na kontrolę nad stroną oraz konfuguracją aplikacji Discord",
+        "Główną funkcją na stronie jest sklep internetowy, zintegrowany z platformą Tebex Headless API. Użytkownicy mogą za jego pomocą kupić przedmioty które pomogą im w rozgrywce.",
+        "Rozwój tego projektu, pozwolił mi doskonalić moje umiejętności jako programista, radząc sobie ze skomplikowanymi zadaniami i funkcjonalnościami, integrując różne technologie w celu stworzenia platformy dla społeczności graczy."
+      ]
+    },
+    "Gainllery": {
+      "description": [
+        "Przedstawiam aplikację zaprojektowaną pod system Windows oraz Linux, stworzoną  w celu płynnego przeglądania zdjęć oraz filmów. Aplikacja nie tylko umożliwia wygodnego przeglądania zdjęć, ale również umożliwia powiększenie filmów podczas ich odtwarzania - wyjątkowa funkcjonalność która ulepsza wrażenia wizualne.",
+        "Obecnie jest w trakcie rozwijania. W planach są dodatkowe funkcjonalności takie jak sortowanie i usuwanie plików, personalizowane ustawienia i wiele więcej.",
+        "Rozwijając ten projekt, poszerzam swoją pasję do tworzenia aplikacji, ale również staram się stworzyć rozwiązanie wygodne dla użytkowników, które ulepsza przeglądanie plików. Zapraszam do śledzenia projektu, gdyż projekt będzie się rozwijał w kierunku wykorzystania pełnego potencjału."
+      ]
+    },
+    "imomaikel dev": {
+      "description": [
+        "Przedstawiam moje internetowe portfolio - pokaz mojej przygody, oraz osiągnięć jako programista. Można tutaj znaleźć moje publiczne projekty, opinie od zadowolonych klientów oraz współpracowników, oraz skontaktować się ze mną poprzez formularz.",
+        "Strona również pokazuje jakie technologie są przez mnie używane, pokazując otwartość do mojego podejścia w tworzeniu aplikacji. Odwiedzający tą stronę mogą dowiedzieć się podstawowe informacje o mnie oraz o mojej pasji do tworzenia innowacyjnych rozwiązań.",
+        "Zaprojektowane z myślą o funkcjonalnośći, strona służy jako \"pośrednik\" dla potenchalnych klientów, pracodawców i innych programistów, aby mogli odkryć moją pracę i nawiązać kontakt. Zapraszam do współpracy."
+      ]
+    }
+  },
   "CodeSnippets": {
     "header": "Fragmenty Kodu",
     "description": "Prezentacja mojego kodu",

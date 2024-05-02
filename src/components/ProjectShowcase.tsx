@@ -2,6 +2,7 @@
 import { bounceAnimation, staggerContainer } from '@/lib/motion';
 import { PUBLIC_PROJECTS } from '@/utils/constans';
 import { FaExternalLinkAlt } from 'react-icons/fa';
+import { useTranslations } from 'next-intl';
 import { FaGithub } from 'react-icons/fa6';
 import ImageSwiper from './ImageSwiper';
 import { motion } from 'framer-motion';
@@ -13,7 +14,11 @@ type TProjectShowcase = {
   props: (typeof PUBLIC_PROJECTS)[0];
 };
 const ProjectShowcase = ({ props }: TProjectShowcase) => {
-  const { name, appUrl, description, images, sourceCodeUrl, techStack, sourceCodeFiles, languages } = props;
+  const { name, appUrl, images, sourceCodeUrl, techStack, sourceCodeFiles, languages } = props;
+  const m = useTranslations('PublicProjects.Misc');
+  const t = useTranslations(`PublicProjects.${name.replace(/\./, ' ')}`);
+
+  const description = (t.raw('description') || []) as string[];
 
   return (
     <motion.div
@@ -47,7 +52,7 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
           >
             {languages.map((language) => (
               <motion.div variants={bounceAnimation({ side: 'horizontal' })} key={`mobile-${name}${language}`}>
-                <Badge variant="secondary">{language}</Badge>
+                <Badge variant="secondary">{m(language)}</Badge>
               </motion.div>
             ))}
           </motion.div>
@@ -77,8 +82,8 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
               <Link href={appUrl}>
                 <FaExternalLinkAlt className="h-6 w-6" />
                 <div className="flex flex-col items-center justify-center">
-                  <span>Open project</span>
-                  <span className="text-xs text-muted-foreground">Try it yourself</span>
+                  <span>{m('OpenProject')}</span>
+                  <span className="text-xs text-muted-foreground">{m('TryItYourself')}</span>
                 </div>
               </Link>
             </Button>
@@ -86,8 +91,8 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
               <Link href={sourceCodeUrl}>
                 <FaGithub className="h-6 w-6" />
                 <div className="flex flex-col items-center justify-center">
-                  <span>Source Code</span>
-                  <span className="text-xs text-muted-foreground">Over {sourceCodeFiles} files</span>
+                  <span>{m('SourceCode')}</span>
+                  <span className="text-xs text-muted-foreground">{m('FileCount', { count: sourceCodeFiles })}</span>
                 </div>
               </Link>
             </Button>
@@ -115,7 +120,7 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
                 variants={bounceAnimation({ side: 'horizontal' })}
                 key={`${name}${language}`}
               >
-                <Badge variant="secondary">{language}</Badge>
+                <Badge variant="secondary">{m(language)}</Badge>
               </motion.div>
             ))}
           </motion.div>
@@ -145,7 +150,7 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
             variants={bounceAnimation({ side: 'vertical', delay: 0.5 })}
             className="text-sm font-semibold"
           >
-            Tech Stack
+            {m('TechStack')}
           </motion.p>
           <motion.div
             initial="hidden"

@@ -8,8 +8,14 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
+enum Status {
+  ONLINE
+  OFFLINE
+}
+
 model Config {
-  id Int @id @default(autoincrement())
+  id     Int    @id @default(autoincrement())
+  status Status @default(OFFLINE)
 }
 
 model WakaEntry {

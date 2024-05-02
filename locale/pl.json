@@ -151,6 +151,9 @@
     "available": "Odpowiedź może być szybka",
     "notAvailable": "Odpowiedź może chwilę zająć",
     "online": "Dostępny",
-    "offline": "Niedostępny"
+    "offline": "Niedostępny",
+    "dialogTitle": "Formularz Kontaktowy",
+    "messageSent": "Twoja wiadomość została wysłana. Dziękuję!",
+    "messageError": "Twoja wiadomość nie została wysłana. Upewnij się, że wpisane dane są poprawne."
   }
 }

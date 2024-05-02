@@ -150,6 +150,9 @@
     "available": "The response can be quick",
     "notAvailable": "The response may take a moment",
     "online": "Online",
-    "offline": "Offline"
+    "offline": "Offline",
+    "dialogTitle": "Contact Form",
+    "messageSent": "Your message has been sent. Thank you!",
+    "messageError": "Your message has not been sent. Make sure the data you provided is correct."
   }
 }

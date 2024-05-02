@@ -2,6 +2,7 @@
 import { HoverBorderGradient } from './ui/hover-border-gradient';
 import { HeroHighlight, Highlight } from './ui/hero-highlight';
 import { BiSolidChevronsDown } from 'react-icons/bi';
+import LocaleSwitcher from './LocaleSwitcher';
 import HeroTypewriter from './HeroTypewriter';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
@@ -126,6 +127,9 @@ const Hero = () => {
             <BiSolidChevronsDown className="mr-2 h-8 w-8" />
             <span className="font-bold">{t('exploreMore')}</span>
           </HoverBorderGradient>
+          <div className="mt-6">
+            <LocaleSwitcher />
+          </div>
         </motion.div>
       </HeroHighlight>
     </div>

@@ -153,6 +153,7 @@
     "offline": "Offline",
     "dialogTitle": "Contact Form",
     "messageSent": "Your message has been sent. Thank you!",
-    "messageError": "Your message has not been sent. Make sure the data you provided is correct."
+    "messageError": "Your message has not been sent. Make sure the data you provided is correct.",
+    "loading": "Checking status..."
   }
 }

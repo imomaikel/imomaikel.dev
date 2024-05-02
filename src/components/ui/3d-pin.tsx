@@ -1,43 +1,35 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { TStatus } from '../OnlineStatus';
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils';
-import { useTranslations } from 'next-intl';
 
 export const PinContainer = ({
   children,
   className,
   containerClassName,
-  onHoverEnd,
-  onHoverStart,
+  hovered,
   status,
 }: {
   children: React.ReactNode;
   className?: string;
   containerClassName?: string;
-  onHoverStart: () => void;
-  onHoverEnd: () => void;
-  status: 'Online' | 'Offline';
+  status: TStatus;
+  hovered: boolean;
 }) => {
   const [transform, setTransform] = useState('translate(-50%,-50%) rotateX(0deg)');
 
-  const onEnter = () => {
-    onHoverStart();
-    setTransform('translate(-50%,-50%) rotateX(40deg) scale(0.8)');
-  };
-  const onLeave = () => {
-    onHoverEnd();
-    setTransform('translate(-50%,-50%) rotateX(0deg) scale(1)');
-  };
+  useEffect(() => {
+    if (hovered) {
+      setTransform('translate(-50%,-50%) rotateX(40deg) scale(0.8)');
+    } else {
+      setTransform('translate(-50%,-50%) rotateX(0deg) scale(1)');
+    }
+  }, [hovered]);
 
   return (
-    <div
-      className={cn('group/pin relative z-50 cursor-default', containerClassName)}
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
-      onTouchStart={onEnter}
-      onTouchEnd={onLeave}
-    >
+    <div className={cn('group/pin relative z-50 cursor-default', containerClassName)}>
       <div
         style={{
           perspective: '1000px',
@@ -59,19 +51,24 @@ export const PinContainer = ({
   );
 };
 
-export const PinPerspective = ({ status }: { status: 'Online' | 'Offline' }) => {
+export const PinPerspective = ({ status }: { status: TStatus }) => {
   const t = useTranslations('GetInTouch');
 
   return (
-    <motion.div className="pointer-events-none  z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-500 group-hover/pin:opacity-100">
-      <div className=" inset-0 -mt-7 h-full w-full  flex-none">
+    <motion.div className="pointer-events-none z-[60] flex h-80 w-96 items-center justify-center opacity-0 transition duration-500 group-hover/pin:opacity-100">
+      <div
+        className={cn(
+          'inset-0 -mt-7 hidden h-full w-full flex-none',
+          (status === 'online' || status === 'offline') && 'block',
+        )}
+      >
         <div className="absolute inset-x-0 top-0  flex justify-center">
           <div className="relative z-10 flex flex-col items-center rounded-full bg-zinc-950 px-4 py-0.5 ring-1 ring-white/10">
             <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-white">
-              {status === 'Offline' ? t('offline') : t('online')}!
+              {status === 'offline' ? t('offline') : status === 'online' ? t('online') : null}!
             </span>
             <span className="relative z-20 inline-block py-0.5 text-xs font-bold text-muted-foreground">
-              {status === 'Online' ? t('available') : t('notAvailable')}
+              {status === 'online' ? t('available') : status === 'offline' ? t('notAvailable') : null}
             </span>
 
             <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover/btn:opacity-40"></span>

@@ -78,7 +78,12 @@
     ],
     "switchLanguage": "Wybierz Swój Język"
   },
-  "CodingStats": {},
+  "CodingStats": {
+    "header": "Czas programowania",
+    "description": "Ukochane statystyki",
+    "totalTimeCoded": "Czas programowania od 9 Paź. 2023",
+    "theLastWeek": "Ostatnie Siedem Dni"
+  },
   "PublicProjects": {
     "header": "Publiczne Projekty",
     "description": "Kilka z moich projektów których kod jest dostępny na GitHub",

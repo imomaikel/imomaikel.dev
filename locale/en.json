@@ -77,7 +77,12 @@
     ],
     "switchLanguage": "Select Your Language"
   },
-  "CodingStats": {},
+  "CodingStats": {
+    "header": "Coding Time",
+    "description": "Beloved Statistics",
+    "totalTimeCoded": "Total time coded since Oct 9 2023",
+    "theLastWeek": "The Last Seven Days"
+  },
   "PublicProjects": {
     "header": "Public Projects",
     "description": "Some of my projects that source code is shared on GitHub",

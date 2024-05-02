@@ -2,12 +2,17 @@
 import PublicProjects from '@/components/PublicProjects';
 import CodeSnippets from '@/components/CodeSnippets';
 import CodingStats from '@/components/CodingStats';
+import { getWakatimeStats } from '@/actions/waka';
 import GetInTouch from '@/components/GetInTouch';
 import Hero from '@/components/Hero';
 import prisma from '@/lib/prisma';
 
 export default async function Home() {
-  const wakaData = await prisma.wakaEntry.findMany();
+  let wakaData = await prisma.wakaEntry.findMany();
+  if (wakaData.length <= 0) {
+    await getWakatimeStats();
+    wakaData = await prisma.wakaEntry.findMany();
+  }
 
   return (
     <div className="flex flex-col">

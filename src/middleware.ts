@@ -1,10 +1,9 @@
 import createMiddleware from 'next-intl/middleware';
 
-// TODO
 export default createMiddleware({
   defaultLocale: 'en',
   locales: ['en', 'pl'],
-  localePrefix: 'always',
+  localePrefix: 'as-needed',
   localeDetection: false,
 });
 

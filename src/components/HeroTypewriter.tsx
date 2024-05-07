@@ -20,6 +20,7 @@ const HeroTypewriter = () => {
     }, HERO_TEXTS_INTERVAL);
 
     return () => clearInterval(interval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [textIndex]);
 
   return (

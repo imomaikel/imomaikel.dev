@@ -51,10 +51,10 @@ const OnlineStatus = () => {
         onMouseLeave={onLeave}
         onTouchStart={onEnter}
         onTouchEnd={onLeave}
-        className="rounded-2xl"
+        className="w-full rounded-2xl"
       >
         <PinContainer status={status} hovered={hovered}>
-          <div className="flex h-[20rem] w-[22rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 ">
+          <div className="flex h-[16rem] w-[18rem] basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 md:h-[20rem] md:w-[22rem] ">
             <h3 className="!m-0 max-w-xs !pb-2 text-base  font-bold text-slate-100">{t('onlineStatus')}</h3>
             <div className="!m-0 !p-0 text-base font-normal">
               <span className="text-sm text-muted-foreground">{t('onlineStatusHint')}</span>

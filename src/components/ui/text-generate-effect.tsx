@@ -19,6 +19,7 @@ export const TextGenerateEffect = ({ words, className }: { words: string; classN
         delay: stagger(0.1),
       },
     );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scope.current, isInView]);
 
   const renderWords = () => {

@@ -53,7 +53,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
         viewport={{ once: true }}
         initial="hidden"
         variants={bounceAnimation({ side: 'vertical', delay: 0.6, steps: [60, -10, 0] })}
-        className="absolute -top-[50px] left-0 w-full md:-top-8"
+        className="absolute -top-[65px] left-0 w-full md:-top-8"
       >
         <div className="relative flex w-full flex-col-reverse justify-between md:flex-row">
           <div className="flex items-center space-x-1">

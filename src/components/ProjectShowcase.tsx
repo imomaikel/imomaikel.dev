@@ -33,7 +33,7 @@ const ProjectShowcase = ({ props }: TProjectShowcase) => {
     >
       <motion.div className="space-y-2">
         {/* Mobile name */}
-        <div className="flex flex-col items-center space-x-4 space-y-2 md:hidden">
+        <div className="flex flex-col items-center space-x-4 space-y-2 pb-6 md:hidden md:pb-0">
           <motion.h4
             initial="hidden"
             whileInView="show"

@@ -9,7 +9,7 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  getWakatimeStats();
+  const responseCode = await getWakatimeStats();
 
-  return NextResponse.json({ ok: true });
+  return NextResponse.json({ ok: true, status: responseCode });
 }

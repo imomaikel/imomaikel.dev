@@ -26,7 +26,10 @@ export const getWakatimeStats = async () => {
     }));
 
     await prisma.wakaEntry.deleteMany();
-
     await prisma.wakaEntry.createMany({ data: codingStats });
-  } catch {}
+    return `success-${startDate}|${endDate}`;
+  } catch (error) {
+    console.error(error);
+    return 'error';
+  }
 };

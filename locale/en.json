@@ -174,5 +174,27 @@
       "I love bringing ideas to life through code, and I've worked on a variety of projects ranging from web applications to software utilities.",
       "I'm always up for a chat. Feel free to reach out - I'd love to connect!"
     ]
+  },
+  "Nav": {
+    "Home": "Home",
+    "Projects": "Projects",
+    "About me": "About Me",
+    "Statistics": "Statistics",
+    "Snippets": "Snippets",
+    "Contact": "Contact"
+  },
+  "Accessibility": {
+    "CloseImage": "close image",
+    "PreviousImage": "previous image",
+    "NextImage": "next image",
+    "FullScreen": "open full screen",
+    "SwitchToPolish": "switch to Polish",
+    "SwitchToEnglish": "switch to English",
+    "ProjectImage": "project image",
+    "Signature": "signature",
+    "ProjectSlide": "project image slide",
+    "PolishFlag": "Polish flag",
+    "EnglishFlag": "USA flag",
+    "SnippetImage": "code snippet"
   }
 }

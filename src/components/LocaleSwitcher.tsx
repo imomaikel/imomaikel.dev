@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const LocaleSwitcher = () => {
   const t = useTranslations('Hero');
+  const a = useTranslations('Accessibility');
   const pathname = usePathname();
   const router = useRouter();
   const [isLoading, setIsLoading] = useState<'pl' | 'en' | null>();
@@ -26,7 +27,7 @@ const LocaleSwitcher = () => {
       <p className="mb-2 text-sm font-semibold tracking-wide">{t('switchLanguage')}</p>
 
       <div className="flex space-x-4">
-        <div role="button" aria-label="switch to english" onClick={() => handleLocaleChange('en')}>
+        <div role="button" aria-label={a('SwitchToEnglish')} onClick={() => handleLocaleChange('en')}>
           {isLoading === 'en' ? (
             <ImSpinner9 className="h-[42px] w-16 animate-spin" />
           ) : (
@@ -35,13 +36,13 @@ const LocaleSwitcher = () => {
               src="/en.webp"
               width={64}
               height={42}
-              alt=""
+              alt={a('EnglishFlag')}
               className="h-[42px] w-[64px] rounded-xl transition-transform hover:scale-110"
             />
           )}
         </div>
 
-        <div role="button" aria-label="switch to polish" onClick={() => handleLocaleChange('pl')}>
+        <div role="button" aria-label={a('SwitchToPolish')} onClick={() => handleLocaleChange('pl')}>
           {isLoading === 'pl' ? (
             <ImSpinner9 className="h-[42px] w-16 animate-spin" />
           ) : (
@@ -50,7 +51,7 @@ const LocaleSwitcher = () => {
               src="/pl.webp"
               width={64}
               height={42}
-              alt=""
+              alt={a('PolishFlag')}
               className="h-[42px] w-[64px] rounded-xl transition-transform hover:scale-110"
             />
           )}

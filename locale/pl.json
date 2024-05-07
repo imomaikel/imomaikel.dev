@@ -175,5 +175,27 @@
       "Uwielbiam wcielać pomysły w życie za pomocą kodu, pracowałem nad różnymi projektami, od aplikacji internetowych po oprogramowania systemowe.",
       "Zawsze jestem chętny na rozmowę, zapraszam do kontatku!"
     ]
+  },
+  "Nav": {
+    "Home": "Dom",
+    "Projects": "Projekty",
+    "About me": "O mnie",
+    "Statistics": "Statystyki",
+    "Snippets": "Fragmenty Kodu",
+    "Contact": "Kontakt"
+  },
+  "Accessibility": {
+    "CloseImage": "zamknij zdjęcie",
+    "PreviousImage": "poprzednie zdjęcie",
+    "NextImage": "następne zdjęcie",
+    "FullScreen": "widok pełnoekranowy",
+    "SwitchToPolish": "przęłącz na język Polski",
+    "SwitchToEnglish": "przełąacz na język Angielski",
+    "ProjectImage": "zdjęcie projektu",
+    "Signature": "podpis",
+    "ProjectSlide": "slajd zdjęcia projektu",
+    "PolishFlag": "flaga Polski",
+    "EnglishFlag": "flaga Stanów Zjednoczonych",
+    "SnippetImage": "fragment kodu"
   }
 }

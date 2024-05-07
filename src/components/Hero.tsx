@@ -11,7 +11,9 @@ import Image from 'next/image';
 
 const Hero = () => {
   const [isMounted, setIsMounted] = useState(false);
+  const a = useTranslations('Accessibility');
   const t = useTranslations('Hero');
+
   const heroHeader = t.raw('header') as { text: string; highlight: boolean; duration: number }[];
 
   useEffect(() => setIsMounted(true), []);
@@ -99,7 +101,7 @@ const Hero = () => {
                 ease: [0.4, 0.0, 0.2, 1],
               }}
             >
-              <Image src="/signature.webp" width={168} height={39} alt="signature" loading="eager" />
+              <Image src="/signature.webp" width={168} height={39} alt={a('Signature')} loading="eager" />
             </motion.div>
           </motion.div>
         </div>

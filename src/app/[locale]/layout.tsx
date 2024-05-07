@@ -23,18 +23,16 @@ const LocaleLayout = ({
 
   return (
     <html lang={locale} className="dark scroll-smooth">
-      <body className={cn('w-screen overflow-x-hidden', inter.className)}>
-        <div className="relative flex h-full min-h-screen w-full bg-background bg-grid-small-white/[0.2]">
-          <div className="pointer-events-none absolute inset-0 flex bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] md:[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
-          <div className="overflow-x-hidden">
-            <NextIntlClientProvider locale={locale} messages={messages}>
-              {children}
-            </NextIntlClientProvider>
+      <NextIntlClientProvider locale={locale} messages={messages}>
+        <body className={cn('w-screen overflow-x-hidden', inter.className)}>
+          <div className="relative flex h-full min-h-screen w-full bg-background bg-grid-small-white/[0.2]">
+            <div className="pointer-events-none absolute inset-0 flex bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] md:[mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
+            <div className="overflow-x-hidden">{children}</div>
           </div>
-        </div>
-        <Navbar />
-        <Vercel />
-      </body>
+          <Navbar />
+          <Vercel />
+        </body>
+      </NextIntlClientProvider>
     </html>
   );
 };

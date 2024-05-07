@@ -6,6 +6,7 @@ import { cn } from '@/lib/utils';
 import Link from 'next/link';
 import { IconType } from 'react-icons';
 import { Button } from './button';
+import { useTranslations } from 'next-intl';
 
 export type TNavItem = {
   name: string;
@@ -15,6 +16,7 @@ export type TNavItem = {
 
 export const FloatingNav = ({ navItems, className }: { navItems: TNavItem[]; className?: string }) => {
   const { scrollYProgress } = useScroll();
+  const t = useTranslations('Nav');
 
   const [visible, setVisible] = useState(false);
 
@@ -60,7 +62,7 @@ export const FloatingNav = ({ navItems, className }: { navItems: TNavItem[]; cla
               <span className="block sm:hidden">
                 <navItem.icon className="h-6 w-6" />
               </span>
-              <span className="hidden text-sm sm:block">{navItem.name}</span>
+              <span className="hidden text-sm sm:block">{t(navItem.name)}</span>
             </Link>
           </Button>
         ))}

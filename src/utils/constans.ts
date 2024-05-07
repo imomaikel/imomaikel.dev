@@ -171,18 +171,18 @@ export const NAV_ITEMS: TNavItem[] = [
   },
   {
     link: '#statistics',
-    name: 'Stats',
+    name: 'Statistics',
     icon: ImStatsDots,
-  },
-  {
-    link: '#code-snippets',
-    name: 'Snippets',
-    icon: IoCodeSlash,
   },
   {
     link: '#get-in-touch',
     name: 'Contact',
     icon: BiMessageDetail,
+  },
+  {
+    link: '#code-snippets',
+    name: 'Snippets',
+    icon: IoCodeSlash,
   },
 ];
 

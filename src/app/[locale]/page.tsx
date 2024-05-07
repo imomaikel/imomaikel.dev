@@ -32,12 +32,12 @@ export default async function Home() {
         <CodingStats data={wakaData} />
       </section>
 
-      <section id="code-snippets">
-        <CodeSnippets />
-      </section>
-
       <section id="get-in-touch">
         <GetInTouch />
+      </section>
+
+      <section id="code-snippets">
+        <CodeSnippets />
       </section>
     </div>
   );

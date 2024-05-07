@@ -23,6 +23,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
   const { setIsOpen, setImgUrl } = useContext(FullscreenImageContext);
   const [swiper, setSwiper] = useState<null | TSwiper>();
   const m = useTranslations('PublicProjects.Misc');
+  const a = useTranslations('Accessibility');
   const [pagination, setPagination] = useState({
     isFirst: true,
     isLast: urls.length >= 2 ? false : true,
@@ -59,7 +60,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
             <div className="flex space-x-1">
               <div
                 role="button"
-                aria-label="previous image"
+                aria-label={a('PreviousImage')}
                 className={cn(
                   'transition-colors',
                   pagination.isFirst ? 'cursor-default text-muted-foreground' : 'hover:text-primary',
@@ -70,7 +71,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
               </div>
               <div
                 role="button"
-                aria-label="next image"
+                aria-label={a('NextImage')}
                 className={cn(
                   'transition-colors',
                   pagination.isLast ? 'cursor-default text-muted-foreground' : 'hover:text-primary',
@@ -110,7 +111,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
         <div
           className="absolute right-2 top-2 z-50 rounded-lg bg-gray-300 p-1.5"
           role="button"
-          aria-label="image fullscreen"
+          aria-label={a('FullScreen')}
           onClick={() => openFullscreen(urls[pagination.currentIndex - 1])}
         >
           <TfiFullscreen className="h-6 w-6 cursor-pointer text-black" />
@@ -123,7 +124,7 @@ const ImageSwiper = ({ urls }: TImageSwiper) => {
               height={360}
               className="h-full w-full rounded-md object-fill"
               sizes="100vw"
-              alt=""
+              alt={a('ProjectSlide')}
             />
           </SwiperSlide>
         ))}

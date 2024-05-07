@@ -1,5 +1,6 @@
 'use client';
 import { TransformWrapper, TransformComponent } from 'react-zoom-pan-pinch';
+import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
 type TImageZoom = {
@@ -7,6 +8,8 @@ type TImageZoom = {
   mobileView: boolean;
 };
 const ImageZoom = ({ src, mobileView }: TImageZoom) => {
+  const a = useTranslations('Accessibility');
+
   if (mobileView) {
     return (
       <Image
@@ -15,7 +18,7 @@ const ImageZoom = ({ src, mobileView }: TImageZoom) => {
         height="800"
         quality={100}
         width="800"
-        alt="thumbnail"
+        alt={a('SnippetImage')}
       />
     );
   }
@@ -29,7 +32,7 @@ const ImageZoom = ({ src, mobileView }: TImageZoom) => {
       onWheelStart={(ref, event) => {
         const dY = event.deltaY;
         if (ref.state.scale === 1 && dY >= 1) {
-          window.scrollBy({ behavior: 'smooth', top: dY });
+          document.getElementById('parallax-photos')?.scrollBy({ behavior: 'smooth', top: dY });
         }
       }}
     >
@@ -41,7 +44,7 @@ const ImageZoom = ({ src, mobileView }: TImageZoom) => {
           quality={100}
           width={400}
           priority={false}
-          alt="thumbnail"
+          alt={a('SnippetImage')}
         />
       </TransformComponent>
     </TransformWrapper>

@@ -29,7 +29,7 @@ const ImageZoom = ({ src, mobileView }: TImageZoom) => {
       onWheelStart={(ref, event) => {
         const dY = event.deltaY;
         if (ref.state.scale === 1 && dY >= 1) {
-          window.scrollBy(0, dY);
+          window.scrollBy({ behavior: 'smooth', top: dY });
         }
       }}
     >

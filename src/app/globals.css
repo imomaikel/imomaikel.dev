@@ -71,3 +71,24 @@
     transform: translate(0, 0) !important;
   }
 }
+
+.custom-shape-divider-bottom-1715091348 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-bottom-1715091348 svg {
+  position: relative;
+  display: block;
+  width: calc(130% + 1.3px);
+  height: 87px;
+}
+
+.custom-shape-divider-bottom-1715091348 .shape-fill {
+  fill: #6d28d9;
+  opacity: 0.5;
+}

@@ -5,6 +5,7 @@ import CodingStats from '@/components/CodingStats';
 import { getWakatimeStats } from '@/actions/waka';
 import GetInTouch from '@/components/GetInTouch';
 import AboutMe from '@/components/AboutMe';
+import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import prisma from '@/lib/prisma';
 
@@ -36,9 +37,11 @@ export default async function Home() {
         <GetInTouch />
       </section>
 
-      <section id="code-snippets">
+      <section id="code-snippets" className="mb-8">
         <CodeSnippets />
       </section>
+
+      <Footer />
     </div>
   );
 }

@@ -123,6 +123,7 @@ const Hero = () => {
             className="flex w-full items-center justify-center rounded-full"
             containerClassName="w-full"
             as="button"
+            onClick={() => document.getElementById('public-projects')?.scrollIntoView()}
           >
             <BiSolidChevronsDown className="mr-2 h-8 w-8" />
             <span className="font-bold">{t('exploreMore')}</span>

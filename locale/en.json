@@ -99,7 +99,7 @@
     },
     "Oleje Sawiniec": {
       "description": [
-        "Introducing a web store tailored for the Polish market, offering a curated selection of 100% natural oils, seeds, and flour for home use. Developed for discerning consumers, the website ensures a seamless user experience, allowing easy browsing, filtering, and sorting of products.",
+        "Introducing a web store customized for the Polish market, offering a curated selection of 100% natural oils, seeds, and flour for home use. Developed for discerning consumers, the website ensures a seamless user experience, allowing easy browsing, filtering, and sorting of products.",
         "Key features include integration with CashBill for secure payments, user account creation for wishlists, and a robust admin panel for comprehensive insights and control over operations. From sales tracking to user behavior analysis, the admin panel offers data-driven tools for business optimization.",
         "As a software developer, my focus has been on crafting a solution that exceeds client requirements, promising a seamless shopping experience for Polish consumers seeking high-quality natural products for their homes."
       ]
@@ -118,6 +118,13 @@
         "Presenting an innovative application designed for both Windows and Linux platforms, aimed at seamlessly viewing images and videos. The application not only allows effortless browsing of media files but also enables users to zoom in on videos while they are playing - a unique feature that enhances the viewing experience.",
         "Currently in the developmental phase, this project is continually evolving. In the pipeline are additional features such as file sorting, deletion capabilities, user settings customization, and much more.",
         "Through this project, I am not only exploring my passion for software development but also striving to create a user-friendly solution that enhances the way individuals interact with their media files. Stay tuned for updates as the project progresses towards its full potential."
+      ]
+    },
+    "Fibercraft": {
+      "description": [
+        "In this project, I had the opportunity to create a comprehensive solution for both players and server administrators.",
+        "The first facet of the project involved developing robust web application customized for ARK: Survival Evolved players. This application serves as a central hub for crucial information, including the top 10 teams on the server. Additionally, I implemented an online store, using Tebex, empowering players to conveniently purchase in-game items. A dedicated section for server administrators was also integrated, granting the ability to adjust settings and access detailed player information.",
+        "The second aspect of the project showcased my collaboration skills, as I worked alongside another developer to craft a custom game plugin in C++, this plugin was carefully optimized to handle the intense workload, executing hundreds of SQL queries per second. By prioritizing efficiency and fairness, we ensured a balanced and enjoyable gaming experience for all players."
       ]
     },
     "imomaikel dev": {
@@ -162,7 +169,7 @@
     "texts": [
       "Hey there! I'm Mike, a 21-year-old IT student with a passion for coding and all things tech. Ever since high school, I've been drawn to the world of software development, and in 2019, I started turning that passion into a career path.",
       "My coding journey began with a curiosity in high school, which eventually evolved into a dedicated pursuit of knowledge in software development. I thrive on the challenges and creative possibilities that coding offers, and I'm constantly seeking ways to improve my skills.",
-      "My primary languages of choice are TypeScript for building robust backends with Node.js and crafting dynamic user interfaces with React. However, I'm not confined to one language or framework. I also enjoy diving into Python for its versatility and C++ for its performance capabilities.",
+      "My primary languages of choice are TypeScript for building a robust backends with Node.js and crafting dynamic user interfaces with React. However, I'm not confined to one language or framework. I also enjoy diving into Python for its versatility and C++ for its performance capabilities.",
       "As we all know, the tech world is always evolving, and I'm committed to staying on the cutting edge. Whether it's mastering a new language, exploring technologies, or creating new projects I thrive on the opportunity to learn and grow as a developer.",
       "I love bringing ideas to life through code, and I've worked on a variety of projects ranging from web applications to software utilities.",
       "I'm always up for a chat. Feel free to reach out - I'd love to connect!"

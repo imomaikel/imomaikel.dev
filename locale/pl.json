@@ -121,6 +121,13 @@
         "Rozwijając ten projekt, poszerzam swoją pasję do tworzenia aplikacji, ale również staram się stworzyć rozwiązanie wygodne dla użytkowników, które ulepsza przeglądanie plików. Zapraszam do śledzenia projektu, gdyż projekt będzie się rozwijał w kierunku wykorzystania pełnego potencjału."
       ]
     },
+    "Fibercraft": {
+      "description": [
+        "W tym projekcie miałem okazję stworzyć kompleksowe rozwiązanie dla graczy jak i administratorów serwera gier.",
+        "Pierwsza część projektu obejmuje programowanie aplikacji internetowej spersonalizowaną dla graczy ARK: Survival Evolved. Aplikacja służy jako centrum najważniejszych informacji, zawierając tabelę 10 najlepszych zespołow. Zaimplementowałem również sklep internetowy (Tebex), umożliwiający graczom wygodny zakup przedmiotów w grze. Znajduje się tu również wydzielona sekcja dla administratorów, gdzie mogą zmieniać ustawienia oraz wyszukiwać szczegółowe informacje o graczach.",
+        "Druga część projektu to kolaboracja z innym programistą w celu stworzenia wtyczki do gry wykonanej w C++, został on zoptymalizowany w celu obsługi intensywnego przepływu danych, wykonując setki zapytań SQL w ciągu sekundy. Skupiając się na wydajności i uczciwym systemie, zapewniliśmy zbalansowaną rozgrywkę dla graczy."
+      ]
+    },
     "imomaikel dev": {
       "description": [
         "Przedstawiam moje internetowe portfolio - pokaz mojej przygody, oraz osiągnięć jako programista. Można tutaj znaleźć moje publiczne projekty, opinie od zadowolonych klientów oraz współpracowników, oraz skontaktować się ze mną poprzez formularz.",

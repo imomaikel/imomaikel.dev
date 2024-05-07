@@ -3,6 +3,7 @@ import { FaHome, FaRegLightbulb } from 'react-icons/fa';
 import { BiMessageDetail } from 'react-icons/bi';
 import { IoCodeSlash } from 'react-icons/io5';
 import { ImStatsDots } from 'react-icons/im';
+import { FaPerson } from 'react-icons/fa6';
 
 export const HERO_TEXTS_INTERVAL = 4_000;
 
@@ -130,9 +131,9 @@ export const NAV_ITEMS: TNavItem[] = [
     icon: FaRegLightbulb,
   },
   {
-    link: '#get-in-touch',
-    name: 'Contact',
-    icon: BiMessageDetail,
+    link: '#about-me',
+    name: 'About me',
+    icon: FaPerson,
   },
   {
     link: '#statistics',
@@ -143,6 +144,11 @@ export const NAV_ITEMS: TNavItem[] = [
     link: '#code-snippets',
     name: 'Snippets',
     icon: IoCodeSlash,
+  },
+  {
+    link: '#get-in-touch',
+    name: 'Contact',
+    icon: BiMessageDetail,
   },
 ];
 

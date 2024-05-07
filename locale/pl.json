@@ -156,5 +156,17 @@
     "messageSent": "Twoja wiadomość została wysłana. Dziękuję!",
     "messageError": "Twoja wiadomość nie została wysłana. Upewnij się, że wpisane dane są poprawne.",
     "loading": "Sprawdzanie statusu..."
+  },
+  "AboutMe": {
+    "header": "O mnie",
+    "description": "Zobacz kim jestem",
+    "texts": [
+      "Cześć! Jestem Michał, 21-letni student informatyki z pasją do programowania i technologii, już od czasów szkoły średniej. W roku 2019, zacząłem zmieniać swoją pasję w ścieżkę zawodową.",
+      "Moja przygoda rozpoczęła się od zaciekawienia danym tematem już w technikum i przekształciła się w dążenie do wiedzy w zakresie tworzenia aplikacji internetowych. Czerpię radość z wyzwań i kreatywnych możliwości, jakie oferuje mi programowanie, stale szukam sposobów na udoskonalanie swoich umiejętności",
+      "Głównie programuje w TypeScript - w celu budowania backendu Node.js oraz do tworzenia dynamicznych interfejsów w React. Nie jestem jedynie przywiązany do jednego języka programowania, czy biblioteki. Z przyjemnością używam Pythona ze względu na jego wszechstronność oraz C++, ze względu na wydajność.",
+      "Jak wszyscy wiemy, świat technologii stale się rozwija, a ja staram się nad nim nadążać. Niezależnie od tego, czy jest to nauka nowego języka lub technologi, czy tworzenie nowych projektów, cieszę się z możliwości rozwoju jako programista.",
+      "Uwielbiam wcielać pomysły w życie za pomocą kodu, pracowałem nad różnymi projektami, od aplikacji internetowych po oprogramowania systemowe.",
+      "Zawsze jestem chętny na rozmowę, zapraszam do kontatku!"
+    ]
   }
 }

@@ -155,5 +155,17 @@
     "messageSent": "Your message has been sent. Thank you!",
     "messageError": "Your message has not been sent. Make sure the data you provided is correct.",
     "loading": "Checking status..."
+  },
+  "AboutMe": {
+    "header": "About Me",
+    "description": "See who I am",
+    "texts": [
+      "Hey there! I'm Mike, a 21-year-old IT student with a passion for coding and all things tech. Ever since high school, I've been drawn to the world of software development, and in 2019, I started turning that passion into a career path.",
+      "My coding journey began with a curiosity in high school, which eventually evolved into a dedicated pursuit of knowledge in software development. I thrive on the challenges and creative possibilities that coding offers, and I'm constantly seeking ways to improve my skills.",
+      "My primary languages of choice are TypeScript for building robust backends with Node.js and crafting dynamic user interfaces with React. However, I'm not confined to one language or framework. I also enjoy diving into Python for its versatility and C++ for its performance capabilities.",
+      "As we all know, the tech world is always evolving, and I'm committed to staying on the cutting edge. Whether it's mastering a new language, exploring technologies, or creating new projects I thrive on the opportunity to learn and grow as a developer.",
+      "I love bringing ideas to life through code, and I've worked on a variety of projects ranging from web applications to software utilities.",
+      "I'm always up for a chat. Feel free to reach out - I'd love to connect!"
+    ]
   }
 }

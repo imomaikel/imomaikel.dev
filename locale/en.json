@@ -138,7 +138,7 @@
   "CodeSnippets": {
     "header": "Code Snippets",
     "description": "Showcase of my coding style",
-    "hint": "Use scroll to zoom the code"
+    "hint": "Click on the code snippet to enlarge"
   },
   "GetInTouch": {
     "header": "Get in touch",
@@ -147,7 +147,7 @@
     "contact": "Contact",
     "clickToOpen": "Click to open",
     "firstName": "First name:",
-    "lastName": "Last name:",
+    "lastName": "Surname:",
     "email": "Email:",
     "subject": "Subject:",
     "message": "Message:",

@@ -32,16 +32,17 @@ const FullscreenImageProvider = ({ children }: TFullscreenImageProvider) => {
       {children}
 
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogContent className="z-[10000] flex h-auto max-h-[90vh] w-max max-w-[90vw] p-0 outline-none" noCloseButton>
-          <div className="relative max-h-[90vh] max-w-[90vw] rounded-lg">
+        <DialogContent className="z-[10000] flex h-auto max-h-[95vh] w-max max-w-[95vw] p-0 outline-none" noCloseButton>
+          <div className="relative max-h-[95vh] max-w-[95vw] rounded-lg">
             <div className="relative">
               <Image
                 alt={a('ProjectImage')}
                 src={imgUrl || ''}
                 width={0}
                 height={0}
+                quality={100}
                 sizes="100vw"
-                className="h-full max-h-[90vh] w-full max-w-[90vw] rounded-lg object-contain"
+                className="h-full max-h-[95vh] w-full max-w-[95vw] rounded-lg object-contain"
               />
             </div>
           </div>

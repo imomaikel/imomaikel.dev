@@ -6,6 +6,7 @@ import { bounceAnimation } from '@/lib/motion';
 import SectionWrapper from './SectionWrapper';
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
+import FullscreenImageProvider from './FullscreenImageProvider';
 
 const CodeSnippets = () => {
   const t = useTranslations('CodeSnippets');
@@ -42,12 +43,14 @@ const CodeSnippets = () => {
           {t('description')}
         </motion.p>
       </motion.div>
-      <div className="w-fit rounded-md bg-muted/40 p-5 md:p-10">
+      <div className="w-fit rounded-md bg-muted/40 p-2 md:p-10">
         <div className="mb-6 hidden items-center justify-center space-x-2 font-medium md:flex">
           <FaRegLightbulb className="h-6 w-6" />
           <p>{t('hint')}</p>
         </div>
-        <ParallaxScroll images={CODE_SNIPPETS} />
+        <FullscreenImageProvider>
+          <ParallaxScroll images={CODE_SNIPPETS} />
+        </FullscreenImageProvider>
       </div>
     </SectionWrapper>
   );

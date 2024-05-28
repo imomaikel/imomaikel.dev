@@ -138,7 +138,7 @@ export const PUBLIC_PROJECTS: {
       '/fibercraft/product.webp',
     ],
     languages: ['English'],
-    sourceCodeFiles: 170,
+    sourceCodeFiles: 215,
     sourceCodeUrl: 'https://github.com/imomaikel/fibercraft-app',
     appUrl: 'https://friendly-fibercraft.com/',
   },

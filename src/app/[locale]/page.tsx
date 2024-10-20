@@ -10,11 +10,14 @@ import Hero from '@/components/Hero';
 import prisma from '@/lib/prisma';
 
 export default async function Home() {
-  let wakaData = await prisma.wakaEntry.findMany();
+  let [wakaData, config] = await Promise.all([prisma.wakaEntry.findMany(), prisma.config.findFirst()]);
   if (wakaData.length <= 0) {
     await getWakatimeStats();
     wakaData = await prisma.wakaEntry.findMany();
   }
+
+  const showStats = config?.showStats ?? true;
+
   return (
     <div className="flex flex-col">
       <section>
@@ -29,9 +32,11 @@ export default async function Home() {
         <AboutMe />
       </section>
 
-      <section id="statistics">
-        <CodingStats data={wakaData} />
-      </section>
+      {showStats && (
+        <section id="statistics">
+          <CodingStats data={wakaData} />
+        </section>
+      )}
 
       <section id="get-in-touch">
         <GetInTouch />

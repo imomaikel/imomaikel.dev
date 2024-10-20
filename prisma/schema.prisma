@@ -14,7 +14,8 @@ enum Status {
 }
 
 model Config {
-  id Int @id @default(autoincrement())
+  id        Int     @id @default(autoincrement())
+  showStats Boolean @default(true)
 }
 
 model WakaEntry {

@@ -108,7 +108,7 @@
     "EliteCore": {
       "description": [
         "Projekt ten rozpoczął się w 2019 roku, kiedy zaczynałem swoją przygodę z programowaniem, od tego czasu ten projekt się nieustannie rozwijał. Jest to sklep internetowy wraz z panelem do gry \"ARK: Survival Evolved & Ascended\"",
-        "Panel umożliwia użytkownikom dostęþ do podglądu ich wydarzeń z gry oraz do tworzenia biletów na stronie, a czat jest synchronizowany na żywo na aplikacji Discord, za pomocą socket.io",
+        "Panel umożliwia użytkownikom dostęp do podglądu ich wydarzeń z gry oraz do tworzenia biletów na stronie, a czat jest synchronizowany na żywo na aplikacji Discord, za pomocą socket.io",
         "Ważną część tego projektu stanowi panel administracyjny, pozwalający na kontrolę nad stroną oraz konfuguracją aplikacji Discord",
         "Główną funkcją na stronie jest sklep internetowy, zintegrowany z platformą Tebex Headless API. Użytkownicy mogą za jego pomocą kupić przedmioty które pomogą im w rozgrywce.",
         "Rozwój tego projektu, pozwolił mi doskonalić moje umiejętności jako programista, radząc sobie ze skomplikowanymi zadaniami i funkcjonalnościami, integrując różne technologie w celu stworzenia platformy dla społeczności graczy."

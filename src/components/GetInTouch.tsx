@@ -70,8 +70,8 @@ const GetInTouch = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <BiMailSend className="h-12 w-12" />
-                <Link href="mailto:imomaikelbusiness@gmail.com" className="hover:underline">
-                  imomaikelbusiness@gmail.com
+                <Link href="mailto:michal03.kolodziejczyk@gmail.com" className="hover:underline">
+                  michal03.kolodziejczyk@gmail.com
                 </Link>
               </div>
             </div>

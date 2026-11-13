@@ -2,7 +2,7 @@ export const common = {
   meta: {
     description: 'Personal site of Michał Kołodziejczyk.',
   },
-  role: 'Senior AI Solutions Engineer',
+  role: 'AI Solutions Engineer',
   language: {
     label: 'Language',
   },
@@ -21,7 +21,6 @@ export const common = {
   },
   cta: {
     bookIntroCall: 'Book a 30-min intro call',
-    calendarTodo: 'calendar link',
   },
   footer: {
     profilesLabel: 'Profiles',

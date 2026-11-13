@@ -23,7 +23,6 @@ export const common: Dictionary['common'] = {
   },
   cta: {
     bookIntroCall: 'Umów 30-minutową rozmowę',
-    calendarTodo: 'link do kalendarza',
   },
   footer: {
     profilesLabel: 'Profile',

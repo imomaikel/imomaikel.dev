@@ -2,6 +2,8 @@ export const locales = ['en', 'pl'] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = 'en';
 
+export const intlLocale: Record<Locale, string> = { en: 'en-GB', pl: 'pl-PL' };
+
 const prefix = (locale: Locale) => (locale === defaultLocale ? '' : `/${locale}`);
 
 export function localizedPath(locale: Locale, path: string = '/'): string {

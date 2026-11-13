@@ -4,7 +4,6 @@ import { ButtonLink } from '@/components/ui/button';
 import { ButtonRow } from '@/components/ui/button-row';
 import { Panel, PanelHeader } from '@/components/ui/panel';
 import { StatusBadge } from '@/components/ui/status-badge';
-import { TodoChip } from '@/components/ui/todo-chip';
 import { Lead, PageTitle } from '@/components/ui/typography';
 import { sectionHref } from '@/config/routes';
 import { site } from '@/config/site';
@@ -63,9 +62,7 @@ export function HeroSection({ locale }: { locale: Locale }) {
         <ButtonLink variant="primary" href={sectionHref(locale, 'contact')}>
           {common.cta.bookIntroCall}
         </ButtonLink>
-        <span className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-muted">
-          {t.freeFitCheck} · <TodoChip>{common.cta.calendarTodo}</TodoChip>
-        </span>
+        <span className="text-muted">{t.freeFitCheck}</span>
       </ButtonRow>
     </SplitSection>
   );

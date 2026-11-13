@@ -5,12 +5,11 @@ export const privacyPolicy: Dictionary['privacyPolicy'] = {
   back: 'Powrót na stronę główną',
   controller: 'Administrator',
   lastUpdated: 'Ostatnia aktualizacja',
-  lastUpdatedValue: '{todo:data}',
   sections: [
     {
       title: 'Administrator danych',
       body: [
-        'Administratorem Twoich danych osobowych jest Michał Kołodziejczyk. W sprawach związanych z przetwarzaniem danych możesz kontaktować się pod adresem: {todo:adres e-mail}.',
+        'Administratorem Twoich danych osobowych jest Michał Kołodziejczyk. W sprawach związanych z przetwarzaniem danych możesz kontaktować się pod adresem: {site:email}.',
       ],
     },
     {
@@ -30,8 +29,8 @@ export const privacyPolicy: Dictionary['privacyPolicy'] = {
       title: 'Odbiorcy danych i infrastruktura',
       body: ['Dane przetwarzane są z wykorzystaniem bezpiecznej infrastruktury technicznej:'],
       facts: [
-        { term: 'Hosting strony i formularza', value: '{todo:dostawca}' },
-        { term: 'Dostawca usług poczty e-mail', value: '{todo:dostawca}' },
+        { term: 'Hosting strony i formularza', value: '{site:hosting}' },
+        { term: 'Dostawca usług poczty e-mail', value: '{site:mailProvider}' },
       ],
       note: 'W przypadku nawiązania płatnej współpracy, dane niezbędne do wystawienia faktury VAT przekazywane są partnerowi rozliczeniowemu B2B (Useme sp. z o.o.).',
     },

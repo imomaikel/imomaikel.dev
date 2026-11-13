@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
+import { DateText } from '@/components/ui/date-text';
 import { DefinitionList } from '@/components/ui/definition-list';
-import { RichText } from '@/components/ui/rich-text';
 import { Section } from '@/components/ui/section';
 import { PageTitle } from '@/components/ui/typography';
 import { routeHref, routes } from '@/config/routes';
@@ -36,7 +36,7 @@ export function PrivacyPolicyPage({ locale }: { locale: Locale }) {
             variant="meta"
             items={[
               { term: t.controller, value: site.ownerName },
-              { term: t.lastUpdated, value: <RichText>{t.lastUpdatedValue}</RichText> },
+              { term: t.lastUpdated, value: <DateText date={site.privacyPolicyUpdated} locale={locale} /> },
             ]}
           />
         </div>

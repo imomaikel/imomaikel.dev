@@ -1,15 +1,14 @@
-/** `{todo:text}` renders a TODO chip. */
+/** `{todo:text}` renders a TODO chip, `{site:key}` a value from config/site.ts. */
 export const privacyPolicy = {
   title: 'Privacy policy',
   back: 'Back to home',
   controller: 'Controller',
   lastUpdated: 'Last updated',
-  lastUpdatedValue: '{todo:date}',
   sections: [
     {
       title: 'Data controller',
       body: [
-        'The controller of your personal data is Michał Kołodziejczyk. For matters related to data processing, you can contact me at: {todo:e-mail address}.',
+        'The controller of your personal data is Michał Kołodziejczyk. For matters related to data processing, you can contact me at: {site:email}.',
       ],
     },
     {
@@ -29,8 +28,8 @@ export const privacyPolicy = {
       title: 'Data recipients and infrastructure',
       body: ['Data is processed using secure technical infrastructure:'],
       facts: [
-        { term: 'Website and form hosting', value: '{todo:provider}' },
-        { term: 'E-mail service provider', value: '{todo:provider}' },
+        { term: 'Website and form hosting', value: '{site:hosting}' },
+        { term: 'E-mail service provider', value: '{site:mailProvider}' },
       ],
       note: 'In the event of paid collaboration, data required for VAT invoicing is transferred to a B2B billing partner (Useme sp. z o.o.).',
     },

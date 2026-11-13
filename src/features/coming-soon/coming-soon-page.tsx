@@ -4,7 +4,6 @@ import { ButtonLink } from '@/components/ui/button';
 import { ButtonRow } from '@/components/ui/button-row';
 import { RowLinks, type RowLink } from '@/components/ui/row-links';
 import { StatusBadge } from '@/components/ui/status-badge';
-import { TodoChip } from '@/components/ui/todo-chip';
 import { Lead, PageTitle } from '@/components/ui/typography';
 import { routes, type RouteKey } from '@/config/routes';
 import { site } from '@/config/site';
@@ -12,6 +11,7 @@ import type { Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
 import { ReleaseLog } from './release-log';
+import { currentStep } from './release-steps';
 
 export function comingSoonMetadata(locale: Locale, at: RouteKey = 'comingSoon') {
   return pageMetadata({ locale, page: at, title: getDictionary(locale).comingSoon.metaTitle });
@@ -20,7 +20,7 @@ export function comingSoonMetadata(locale: Locale, at: RouteKey = 'comingSoon') 
 export function ComingSoonPage({ locale, at = 'comingSoon' }: { locale: Locale; at?: RouteKey }) {
   const { common, comingSoon: t } = getDictionary(locale);
   const contact: RowLink[] = [
-    { label: t.contact.email, href: site.emailUrl, hint: t.contact.emailTodo },
+    { label: t.contact.email, href: site.emailUrl, hint: site.email, monoHint: true },
     { label: 'LinkedIn', href: site.linkedinUrl, hint: site.linkedinHandle, monoHint: true },
     { label: 'GitHub', href: site.githubUrl, hint: site.githubHandle, monoHint: true },
   ];
@@ -33,7 +33,9 @@ export function ComingSoonPage({ locale, at = 'comingSoon' }: { locale: Locale; 
             <span className="text-ui font-extrabold">
               {site.displayName} · {common.role}
             </span>
-            <StatusBadge variant="live">{t.status}</StatusBadge>
+            <StatusBadge variant="live">
+              {t.status}: {t.releaseLog.phases[currentStep()]}
+            </StatusBadge>
           </>
         }
         aside={<ReleaseLog locale={locale} />}
@@ -44,7 +46,6 @@ export function ComingSoonPage({ locale, at = 'comingSoon' }: { locale: Locale; 
           <ButtonLink variant="primary" href={site.calendarUrl}>
             {common.cta.bookIntroCall}
           </ButtonLink>
-          <TodoChip>{common.cta.calendarTodo}</TodoChip>
         </ButtonRow>
         <RowLinks id="contact" items={contact} className="max-w-[520px]" />
       </SplitSection>

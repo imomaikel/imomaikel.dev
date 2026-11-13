@@ -1,6 +1,6 @@
+import { DateText } from '@/components/ui/date-text';
 import { IndexLabel } from '@/components/ui/index-label';
 import { Panel, PanelHeader } from '@/components/ui/panel';
-import { TodoChip } from '@/components/ui/todo-chip';
 import { site } from '@/config/site';
 import type { Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
@@ -26,7 +26,7 @@ export function ReleaseLog({ locale }: { locale: Locale }) {
       </ol>
       <div className="flex flex-wrap items-baseline justify-between gap-x-5 gap-y-1.5 border-t border-fg px-5 py-[22px]">
         <span className="text-ui text-muted">{t.expectedLaunch}</span>
-        <TodoChip>{t.dateTodo}</TodoChip>
+        <DateText date={site.launchDate} locale={locale} className="text-ui text-fg" />
       </div>
     </Panel>
   );

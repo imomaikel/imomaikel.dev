@@ -2,6 +2,8 @@ import Link from 'next/link';
 import { PageShell } from '@/components/layout/page-shell';
 import { SplitSection } from '@/components/layout/split-section';
 import { ButtonLink } from '@/components/ui/button';
+import { ButtonRow } from '@/components/ui/button-row';
+import { IndexLabel } from '@/components/ui/index-label';
 import { Panel, PanelHeader } from '@/components/ui/panel';
 import { StatusBadge } from '@/components/ui/status-badge';
 import { Lead, PageTitle } from '@/components/ui/typography';
@@ -13,7 +15,7 @@ import { pageMetadata } from '@/lib/metadata';
 export function notFoundMetadata(locale: Locale) {
   return pageMetadata({
     locale,
-    path: routes.notFound,
+    page: 'notFound',
     title: getDictionary(locale).notFound.metaTitle,
     noindex: true,
   });
@@ -34,9 +36,9 @@ export function NotFoundPage({ locale }: { locale: Locale }) {
                 <li key={id} className="border-t border-line">
                   <Link
                     href={sectionHref(locale, id)}
-                    className="flex min-h-[60px] items-center gap-4 px-5 text-ui no-underline hover:bg-panel-hover hover:text-fg-bright"
+                    className="flex min-h-[60px] items-center gap-4 px-5 text-ui no-underline hover:bg-panel-hover"
                   >
-                    <span className="font-mono text-label text-dim">{String(i + 1).padStart(2, '0')}</span>
+                    <IndexLabel n={i + 1} />
                     <span className="flex-auto">{t.links[id]}</span>
                     <span aria-hidden="true" className="text-dim">
                       →
@@ -50,14 +52,14 @@ export function NotFoundPage({ locale }: { locale: Locale }) {
       >
         <PageTitle id="h1">{t.title}</PageTitle>
         <Lead>{t.body}</Lead>
-        <div className="flex flex-wrap items-center gap-x-5 gap-y-3">
+        <ButtonRow>
           <ButtonLink variant="primary" href={routeHref(locale, 'home')}>
             {t.backHome}
           </ButtonLink>
           <ButtonLink variant="outline" href={sectionHref(locale, 'contact')}>
             {t.reportLink}
           </ButtonLink>
-        </div>
+        </ButtonRow>
       </SplitSection>
     </PageShell>
   );

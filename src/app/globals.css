@@ -18,6 +18,19 @@
   --text-label: 17px;
   --text-title: 18px;
   --text-ui: 19px;
+  --text-row: 22px;
+
+  --animate-blink: blink 1.2s steps(1) infinite;
+  @keyframes blink {
+    0%,
+    49% {
+      opacity: 1;
+    }
+    50%,
+    100% {
+      opacity: 0.25;
+    }
+  }
 
   --font-sans: var(--font-geist), sans-serif;
   --font-mono: var(--font-jetbrains-mono), monospace;
@@ -28,6 +41,11 @@
   --breakpoint-lg: 68.75rem; /* 1100px */
   --breakpoint-xl: 73.75rem; /* 1180px */
   --breakpoint-2xl: 90rem; /* 1440px */
+}
+
+@utility mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-label);
 }
 
 @layer base {

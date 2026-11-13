@@ -1,17 +1,18 @@
 import type { Metadata } from 'next';
+import { routes, type RouteKey } from '@/config/routes';
 import { site } from '@/config/site';
 import { alternateLanguages, localizedPath, type Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 
 type PageMetadataOptions = {
   locale: Locale;
-  path: string;
+  page: RouteKey;
   title?: string;
   /** Keep the page out of search engines and skip canonical/hreflang. */
   noindex?: boolean;
 };
 
-export function pageMetadata({ locale, path, title, noindex = false }: PageMetadataOptions): Metadata {
+export function pageMetadata({ locale, page, title, noindex = false }: PageMetadataOptions): Metadata {
   const { meta } = getDictionary(locale).common;
   return {
     title: title ?? site.name,
@@ -20,8 +21,8 @@ export function pageMetadata({ locale, path, title, noindex = false }: PageMetad
       ? { robots: { index: false } }
       : {
           alternates: {
-            canonical: localizedPath(locale, path),
-            languages: alternateLanguages(path),
+            canonical: localizedPath(locale, routes[page]),
+            languages: alternateLanguages(routes[page]),
           },
         }),
   };

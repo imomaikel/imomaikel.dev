@@ -4,6 +4,7 @@ export const common: Dictionary['common'] = {
   meta: {
     description: 'Strona osobista Michała Kołodziejczyka.',
   },
+  role: 'Architekt Systemów AI',
   language: {
     label: 'Język',
   },

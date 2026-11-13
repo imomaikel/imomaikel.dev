@@ -2,6 +2,7 @@ export const common = {
   meta: {
     description: 'Personal site of Michał Kołodziejczyk.',
   },
+  role: 'Senior AI Solutions Engineer',
   language: {
     label: 'Language',
   },

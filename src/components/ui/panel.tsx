@@ -15,7 +15,7 @@ export function PanelHeader({ title, titleId, meta }: { title: ReactNode; titleI
       <h2 id={titleId} className="m-0 text-title font-extrabold">
         {title}
       </h2>
-      {meta && <span className="font-mono text-label text-dim">{meta}</span>}
+      {meta && <span className="mono-label text-dim">{meta}</span>}
     </div>
   );
 }

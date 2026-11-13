@@ -6,7 +6,7 @@ const base = 'flex items-center font-extrabold no-underline';
 
 const variants = {
   primary: 'bg-accent px-7 text-bg hover:bg-accent-hover hover:text-bg active:translate-y-px',
-  outline: 'border border-line-strong px-6 hover:border-fg hover:text-fg-bright',
+  outline: 'border border-line-strong px-6 hover:border-fg',
   compact: 'justify-center bg-accent px-3.5 text-bg hover:bg-accent-hover hover:text-bg',
 } as const;
 

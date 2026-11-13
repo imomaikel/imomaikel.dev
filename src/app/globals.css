@@ -1,26 +1,85 @@
 @import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-bg: #0a0a0a;
+  --color-panel: #111111;
+  --color-panel-alt: #141414;
+  --color-panel-hover: #161616;
+  --color-line: #333333;
+  --color-line-strong: #474747;
+  --color-line-dashed: #707070;
+  --color-fg: #ededed;
+  --color-fg-bright: #ffffff;
+  --color-muted: #b3b3b3;
+  --color-dim: #919191;
+  --color-accent: #a7b4c0;
+  --color-accent-hover: #c2ccd5;
+
+  --text-label: 17px;
+  --text-title: 18px;
+  --text-ui: 19px;
+
+  --font-sans: var(--font-geist), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
+
+  --breakpoint-xs: 30rem; /* 480px */
+  --breakpoint-sm: 37.5rem; /* 600px */
+  --breakpoint-md: 38.75rem; /* 620px */
+  --breakpoint-lg: 68.75rem; /* 1100px */
+  --breakpoint-xl: 73.75rem; /* 1180px */
+  --breakpoint-2xl: 90rem; /* 1440px */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    color-scheme: dark;
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  * {
+    border-radius: 0;
+  }
+
+  html,
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: var(--color-fg);
+    text-underline-offset: 3px;
+  }
+
+  a:hover {
+    color: var(--color-fg-bright);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+
+  input,
+  textarea,
+  button {
+    font: inherit;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-duration: 0s !important;
+      animation: none !important;
+    }
+  }
 }

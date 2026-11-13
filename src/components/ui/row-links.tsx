@@ -7,9 +7,9 @@ export type RowLink = {
   monoHint?: boolean;
 };
 
-export function RowLinks({ items, className }: { items: readonly RowLink[]; className?: string }) {
+export function RowLinks({ items, id, className }: { items: readonly RowLink[]; id?: string; className?: string }) {
   return (
-    <div className={cx('flex flex-col border-t border-fg', className)}>
+    <div id={id} className={cx('flex flex-col border-t border-fg', className)}>
       {items.map(({ label, href, hint, monoHint }) => (
         <a
           key={label}

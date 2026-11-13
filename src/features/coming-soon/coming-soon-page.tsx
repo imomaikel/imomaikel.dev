@@ -6,18 +6,18 @@ import { RowLinks, type RowLink } from '@/components/ui/row-links';
 import { StatusBadge } from '@/components/ui/status-badge';
 import { TodoChip } from '@/components/ui/todo-chip';
 import { Lead, PageTitle } from '@/components/ui/typography';
-import { routes } from '@/config/routes';
+import { routes, type RouteKey } from '@/config/routes';
 import { site } from '@/config/site';
 import type { Locale } from '@/i18n/config';
 import { getDictionary } from '@/i18n/dictionaries';
 import { pageMetadata } from '@/lib/metadata';
 import { ReleaseLog } from './release-log';
 
-export function comingSoonMetadata(locale: Locale) {
-  return pageMetadata({ locale, page: 'comingSoon', title: getDictionary(locale).comingSoon.metaTitle });
+export function comingSoonMetadata(locale: Locale, at: RouteKey = 'comingSoon') {
+  return pageMetadata({ locale, page: at, title: getDictionary(locale).comingSoon.metaTitle });
 }
 
-export function ComingSoonPage({ locale }: { locale: Locale }) {
+export function ComingSoonPage({ locale, at = 'comingSoon' }: { locale: Locale; at?: RouteKey }) {
   const { common, comingSoon: t } = getDictionary(locale);
   const contact: RowLink[] = [
     { label: t.contact.email, href: site.emailUrl, hint: t.contact.emailTodo },
@@ -25,7 +25,7 @@ export function ComingSoonPage({ locale }: { locale: Locale }) {
     { label: 'GitHub', href: site.githubUrl, hint: site.githubHandle, monoHint: true },
   ];
   return (
-    <PageShell locale={locale} path={routes.comingSoon}>
+    <PageShell locale={locale} path={routes[at]}>
       <SplitSection
         labelledBy="h1"
         status={
@@ -46,7 +46,7 @@ export function ComingSoonPage({ locale }: { locale: Locale }) {
           </ButtonLink>
           <TodoChip>{common.cta.calendarTodo}</TodoChip>
         </ButtonRow>
-        <RowLinks items={contact} className="max-w-[520px]" />
+        <RowLinks id="contact" items={contact} className="max-w-[520px]" />
       </SplitSection>
     </PageShell>
   );

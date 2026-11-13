@@ -1,7 +1,7 @@
-import { HomePage, homeMetadata } from '@/features/home/home-page';
+import { LandingPage, landingMetadata } from '@/features/landing/landing-page';
 
-export const metadata = homeMetadata('pl');
+export const metadata = landingMetadata('pl');
 
 export default function Page() {
-  return <HomePage locale="pl" />;
+  return <LandingPage locale="pl" />;
 }

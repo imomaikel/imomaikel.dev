@@ -1,8 +1,7 @@
-import { site } from '@/config/site';
-import { pageMetadata } from '@/lib/metadata';
+import { HomePage, homeMetadata } from '@/features/home/home-page';
 
-export const metadata = pageMetadata({ locale: 'en', page: 'home' });
+export const metadata = homeMetadata('en');
 
-export default function Home() {
-  return <main>{site.name}</main>;
+export default function Page() {
+  return <HomePage locale="en" />;
 }

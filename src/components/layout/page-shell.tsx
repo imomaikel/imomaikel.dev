@@ -7,17 +7,19 @@ export function PageShell({
   locale,
   path,
   cta,
+  sections,
   children,
 }: {
   locale: Locale;
   path: string;
   cta?: boolean;
+  sections?: boolean;
   children: ReactNode;
 }) {
   return (
     <div className="flex min-h-screen flex-col">
-      <SiteHeader locale={locale} path={path} cta={cta} />
-      <main className="flex flex-auto">{children}</main>
+      <SiteHeader locale={locale} path={path} cta={cta} sections={sections} />
+      <main className="flex flex-auto flex-col">{children}</main>
       <SiteFooter locale={locale} />
     </div>
   );

@@ -3,8 +3,6 @@ export const comingSoon = {
   status: 'status: deploying',
   title: 'New site coming soon.',
   body: "I'm rebuilding this site around the AI agents I design for FinTech and accounting teams. Until it's live, you can still book a call or write to me directly.",
-  bookCall: 'Book a 30-min intro call',
-  calendarTodo: 'calendar link',
   contact: {
     email: 'E-mail',
     emailTodo: 'TODO address',

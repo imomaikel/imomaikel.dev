@@ -15,6 +15,8 @@
   --color-accent: #a7b4c0;
   --color-accent-hover: #c2ccd5;
 
+  --spacing-gutter: clamp(0px, 2.5vw, 32px);
+
   --text-label: 17px;
   --text-title: 18px;
   --text-ui: 19px;

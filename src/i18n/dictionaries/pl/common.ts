@@ -8,9 +8,22 @@ export const common: Dictionary['common'] = {
   language: {
     label: 'Język',
   },
+  nav: {
+    problems: 'Problemy',
+    poc: 'Case study',
+    process: 'Współpraca',
+    security: 'Bezpieczeństwo',
+    contact: 'Kontakt',
+  },
   header: {
     homeLabel: 'Strona główna',
     bookCall: 'Umów rozmowę',
+    menu: 'Menu',
+    sectionsLabel: 'Sekcje',
+  },
+  cta: {
+    bookIntroCall: 'Umów 30-minutową rozmowę',
+    calendarTodo: 'link do kalendarza',
   },
   footer: {
     profilesLabel: 'Profile',

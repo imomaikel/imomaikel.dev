@@ -1,3 +1,10 @@
-export function IndexLabel({ n }: { n: number }) {
-  return <span className="mono-label text-dim">{String(n).padStart(2, '0')}</span>;
+import { cx } from '@/lib/cx';
+
+export function IndexLabel({ n, prefix = '', className }: { n: number; prefix?: string; className?: string }) {
+  return (
+    <span className={cx('mono-label text-dim', className)}>
+      {prefix}
+      {String(n).padStart(2, '0')}
+    </span>
+  );
 }

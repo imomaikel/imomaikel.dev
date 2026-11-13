@@ -42,9 +42,9 @@ export function ComingSoonPage({ locale }: { locale: Locale }) {
         <Lead>{t.body}</Lead>
         <ButtonRow>
           <ButtonLink variant="primary" href={site.calendarUrl}>
-            {t.bookCall}
+            {common.cta.bookIntroCall}
           </ButtonLink>
-          <TodoChip>{t.calendarTodo}</TodoChip>
+          <TodoChip>{common.cta.calendarTodo}</TodoChip>
         </ButtonRow>
         <RowLinks items={contact} className="max-w-[520px]" />
       </SplitSection>

@@ -4,6 +4,7 @@ import { cx } from '@/lib/cx';
 const titleSizes = {
   xl: 'text-[clamp(40px,5.4vw,80px)] leading-[0.98]',
   lg: 'text-[clamp(36px,4.4vw,64px)] leading-none',
+  md: 'text-[clamp(34px,4.3vw,64px)] leading-none',
 } as const;
 
 export function PageTitle({
@@ -23,11 +24,22 @@ export function PageTitle({
   );
 }
 
-export function SectionTitle({ className, ...props }: ComponentProps<'h2'>) {
+const sectionSizes = {
+  xs: 'text-[21px] leading-normal',
+  sm: 'text-[clamp(22px,2vw,28px)] leading-[1.15] tracking-[-0.01em]',
+  lg: 'text-[clamp(32px,3.4vw,48px)] leading-[1.05] tracking-[-0.02em]',
+} as const;
+
+export function SectionTitle({
+  size = 'sm',
+  className,
+  ...props
+}: ComponentProps<'h2'> & { size?: keyof typeof sectionSizes }) {
   return (
     <h2
       className={cx(
-        'm-0 text-[clamp(22px,2vw,28px)] leading-[1.15] font-extrabold tracking-[-0.01em] text-balance [overflow-wrap:normal] [hyphens:none]',
+        'm-0 font-extrabold text-balance [overflow-wrap:normal] [hyphens:none]',
+        sectionSizes[size],
         className,
       )}
       {...props}

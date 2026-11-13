@@ -4,6 +4,7 @@ import { cx } from '@/lib/cx';
 const markers = {
   idle: 'border border-accent',
   live: 'animate-blink bg-accent',
+  solid: 'bg-accent',
 } as const;
 
 export function StatusBadge({ variant = 'idle', children }: { variant?: keyof typeof markers; children: ReactNode }) {
